@@ -1173,7 +1173,7 @@ ul, ol { list-style: none; }
   }
 
   .hero-visual {
-    order: -1;
+    order: 1;
   }
 
   .hero-mockup {
