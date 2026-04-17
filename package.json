@@ -1,0 +1,25 @@
+{
+  "name": "realteamdigital-website",
+  "version": "2.0.0",
+  "description": "REAL TEAM Digital — realteamdigital.sk. Eleventy static site.",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakub-ai23/rt-digital.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jakub-ai23/rt-digital/issues"
+  },
+  "homepage": "https://github.com/jakub-ai23/rt-digital#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

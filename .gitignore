@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Eleventy build output
+# Using GitHub Actions deploy — _site/ is a build artifact, not committed.
+# See .github/workflows/build-pages.yml and BUILD.md for deploy instructions.
+_site/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/

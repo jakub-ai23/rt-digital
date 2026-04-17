@@ -1,0 +1,29 @@
+{#
+  made-in-germany.njk — Trust badge: "Made in Europe · Hosted in Germany"
+  Created: 2026-04-17
+  Last updated: 2026-04-17
+
+  Reusable in: hero (eyebrow), footer (trust row), and vertical landing pages.
+  Styling: subtle, DM Sans body font, Deep Purple accent consistent with design system.
+
+  Usage:
+    {% include "partials/made-in-germany.njk" %}
+
+  Optional modifier class via `badgeClass` variable set before include:
+    {% set badgeClass = "badge-hero" %}{% include "partials/made-in-germany.njk" %}
+#}
+
+<!-- Hosting: Hetzner Online GmbH, Nuremberg (NBG1). Confirmed via whois 2026-04-17. -->
+<div class="trust-badge {{ badgeClass | default('') }}" aria-label="European company, German servers, GDPR-native">
+  <div class="trust-badge-inner">
+    <span class="trust-badge-icon" aria-hidden="true">
+      <!-- EU mark -->
+      <svg viewBox="0 0 20 20" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <text x="10" y="14" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.9">EU</text>
+      </svg>
+    </span>
+    <span class="trust-badge-label">Made in Europe&thinsp;·&thinsp;German servers&thinsp;·&thinsp;GDPR-native</span>
+    <span class="trust-badge-tooltip" role="tooltip">Hetzner, Nuremberg. European company. No US cloud.</span>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+{#
+  base.njk — HTML shell for all REAL TEAM Digital pages
+  Created: 2026-04-17
+  Last updated: 2026-04-17
+
+  Expected front matter from child pages:
+    title       — page <title> suffix (appended to "REAL TEAM Digital — ")
+    description — meta description
+    activeNav   — nav link key for active-link highlighting (home|groupflow|gyms|creators|communities|blog|about)
+#}
+<!DOCTYPE html>
+<!-- Created: 2026-03-28 | Last updated: 2026-04-17 -->
+<!--
+  REAL TEAM Digital — realteamdigital.sk
+  Built with Eleventy 3.x. Output: pure static HTML for GitHub Pages.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description | default('REAL TEAM Digital — tech company from the travel industry. GroupFlow: AI-powered group booking software for hotels, group leaders, and travel agencies.') }}">
+
+  <title>{% if title %}REAL TEAM Digital — {{ title }}{% else %}REAL TEAM Digital — Tech from the travel industry{% endif %}</title>
+
+  <!-- Fonts: Space Grotesk (headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  {% include "partials/nav.njk" %}
+
+  {{ content | safe }}
+
+  {% include "partials/footer.njk" %}
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{#
+  nav.njk — Main navigation (desktop + mobile drawer)
+  Created: 2026-04-17
+  Last updated: 2026-04-17
+
+  Uses `activeNav` from page front matter to highlight current link.
+  Values: home | groupflow | blog | about
+
+  Scope simplified 2026-04-17: single flat nav. No dropdowns.
+  GroupFlow is the only product surfaced — the rest are dropped until real.
+#}
+
+  <!-- ===== NAVIGATION ===================================== -->
+  <div class="nav-wrapper" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="REAL TEAM Digital — home">
+        <span class="nav-logo-mark" aria-hidden="true">RT</span>
+        <span>REAL TEAM Digital</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/" {% if activeNav == 'home' %}class="nav-active" aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="/groupflow/" {% if activeNav == 'groupflow' %}class="nav-active" aria-current="page"{% endif %}>GroupFlow</a></li>
+        <li><a href="/blog/" {% if activeNav == 'blog' %}class="nav-active" aria-current="page"{% endif %}>Blog</a></li>
+        <li><a href="/#team">About</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">Talk to Us</a>
+
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile navigation drawer -->
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="nav-mobile-close" aria-label="Close menu">&times;</button>
+    <nav class="nav-mobile-links" aria-label="Mobile navigation">
+      <a href="/" {% if activeNav == 'home' %}class="nav-active" aria-current="page"{% endif %}>Home</a>
+      <a href="/groupflow/" {% if activeNav == 'groupflow' %}class="nav-active" aria-current="page"{% endif %}>GroupFlow</a>
+      <a href="/blog/" {% if activeNav == 'blog' %}class="nav-active" aria-current="page"{% endif %}>Blog</a>
+      <a href="/#team">About</a>
+      <a href="#contact" class="nav-cta-mobile">Talk to Us</a>
+    </nav>
+  </div>

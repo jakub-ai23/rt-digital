@@ -1,0 +1,533 @@
+---
+layout: base.njk
+title: GroupFlow — Group Booking Manager for Hotels
+description: "GroupFlow replaces spreadsheets, email chains, and manual re-entry for hotel group bookings. One link, clean data, PMS-ready export."
+activeNav: groupflow
+---
+
+  <!-- ===== PRODUCT HERO ==================================== -->
+  <section class="hero product-hero" aria-labelledby="gf-hero-headline">
+    <div class="container">
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          <span>Product &middot; Live</span>
+        </div>
+
+        {% set badgeClass = "badge-hero" %}
+        {% include "partials/made-in-germany.njk" %}
+
+        <h1 class="hero-headline" id="gf-hero-headline">GroupFlow</h1>
+
+        <p class="hero-tagline-large">
+          Group bookings for hotels — without the chaos.
+        </p>
+
+        <p class="hero-sub">
+          GroupFlow replaces the spreadsheets, email chains, and manual data entry
+          that cost your front desk 4–10 hours per group. One tool. Clean data. Ready for your PMS.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="mailto:info@realteamdigital.sk?subject=GroupFlow%20demo%20request" class="btn btn-primary">
+            Request a demo
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
+        </div>
+      </div>
+
+      <!-- Dashboard mockup — same component as homepage -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-mockup">
+          <div class="mockup-browser">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <div class="mockup-dot"></div>
+                <div class="mockup-dot"></div>
+                <div class="mockup-dot"></div>
+              </div>
+              <div class="mockup-url">groupflow.realteamdigital.sk</div>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-stats">
+                <div class="mockup-stat">
+                  <div class="mockup-stat-num">54</div>
+                  <div class="mockup-stat-label">Guests</div>
+                </div>
+                <div class="mockup-stat">
+                  <div class="mockup-stat-num">22</div>
+                  <div class="mockup-stat-label">Rooms</div>
+                </div>
+                <div class="mockup-stat">
+                  <div class="mockup-stat-num">9</div>
+                  <div class="mockup-stat-label">Nights</div>
+                </div>
+              </div>
+              <div class="mockup-table-head">
+                <span>Guest</span>
+                <span>Arrival</span>
+                <span>Category</span>
+                <span>Half Board</span>
+              </div>
+              <div class="mockup-row">
+                <div class="mockup-name">Müller, K.</div>
+                <div class="mockup-cell">Mar 10</div>
+                <div class="mockup-cell">Sea View</div>
+                <div><span class="mockup-badge badge-confirmed">Yes</span></div>
+              </div>
+              <div class="mockup-row">
+                <div class="mockup-name">Novák, J.</div>
+                <div class="mockup-cell">Mar 10</div>
+                <div class="mockup-cell">Superior</div>
+                <div><span class="mockup-badge badge-confirmed">Yes</span></div>
+              </div>
+              <div class="mockup-row">
+                <div class="mockup-name">Weber, L.</div>
+                <div class="mockup-cell">Mar 11</div>
+                <div class="mockup-cell">No View</div>
+                <div><span class="mockup-badge badge-pending">No</span></div>
+              </div>
+              <div class="mockup-row">
+                <div class="mockup-name">Horvát, M.</div>
+                <div class="mockup-cell">Mar 9</div>
+                <div class="mockup-cell">Sea View</div>
+                <div><span class="mockup-badge badge-late">Late reg.</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-label">GroupFlow — Live Preview</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== THE PROBLEM ==================================== -->
+  <section class="section gf-problem" id="problem" aria-labelledby="gf-problem-headline">
+    <div class="container">
+
+      <header class="gf-section-header reveal">
+        <span class="section-label">The problem</span>
+        <h2 class="section-headline" id="gf-problem-headline">
+          Every hotel that handles groups<br>
+          <em>knows this pain.</em>
+        </h2>
+      </header>
+
+      <div class="gf-problem-grid reveal">
+
+        <div class="gf-problem-card">
+          <div class="gf-problem-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="gf-problem-title">60+ emails per group</h3>
+          <p class="gf-problem-text">We counted them ourselves. One sport camp. 54 guests. The hotel got 60+ emails before check-in. The organizer wasn't trying to be difficult — the process made it unavoidable.</p>
+        </div>
+
+        <div class="gf-problem-card">
+          <div class="gf-problem-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3 class="gf-problem-title">4–10 hours of manual work</h3>
+          <p class="gf-problem-text">Every group means re-typing names from Word documents, cross-checking room categories, updating spreadsheets. Multiplied by every group, every season — that's weeks of front desk time, per year.</p>
+        </div>
+
+        <div class="gf-problem-card">
+          <div class="gf-problem-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="gf-problem-title">Data is stale before you open it</h3>
+          <p class="gf-problem-text">The spreadsheet the organizer sends is already outdated. Three guests changed their dates. One canceled. Two added meal plans. You find out at check-in, not before.</p>
+        </div>
+
+      </div>
+
+      <div class="gf-problem-scenarios reveal">
+        <h3 class="gf-scenarios-title">This affects every group type you handle</h3>
+        <div class="gf-scenarios-grid">
+          <div class="gf-scenario-item">
+            <span class="gf-scenario-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+            </span>
+            <div>
+              <strong>Sport camps</strong>
+              <p>25–80 athletes, complex rooming, meal plans varying by training schedule. We built GroupFlow to handle FRESH — our own 54-person sport camp in Mallorca.</p>
+            </div>
+          </div>
+          <div class="gf-scenario-item">
+            <span class="gf-scenario-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </span>
+            <div>
+              <strong>School trips</strong>
+              <p>Teachers submit rooming lists on behalf of students. Late additions. Dietary requirements. Permission levels. It's the same chaos, repeated three times per academic year.</p>
+            </div>
+          </div>
+          <div class="gf-scenario-item">
+            <span class="gf-scenario-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 9V7H2v5l10 5 10-5V9z"/><path d="M6 12v7"/><path d="M18 12v7"/><path d="M2 19h20"/></svg>
+            </span>
+            <div>
+              <strong>Tour groups</strong>
+              <p>A travel agency sends 30 people with staggered arrivals, mixed room categories, and a tour leader who changes the list twice before check-in. Standard.</p>
+            </div>
+          </div>
+          <div class="gf-scenario-item">
+            <span class="gf-scenario-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </span>
+            <div>
+              <strong>Corporate retreats</strong>
+              <p>HR sends a list, then it changes. Dietary needs. Single vs. double rooms. Special requests. Plus a manager who needs everything confirmed in writing. Twice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== HOW IT WORKS =================================== -->
+  <section class="section gf-how" id="how-it-works" aria-labelledby="gf-how-headline">
+    <div class="container">
+
+      <header class="gf-section-header reveal">
+        <span class="section-label">How it works</span>
+        <h2 class="section-headline" id="gf-how-headline">
+          Three steps.<br>
+          <em>No back-and-forth.</em>
+        </h2>
+      </header>
+
+      <div class="gf-steps reveal">
+
+        <div class="gf-step">
+          <div class="gf-step-number" aria-hidden="true">01</div>
+          <div class="gf-step-content">
+            <h3 class="gf-step-title">You give the organizer one link.</h3>
+            <p class="gf-step-text">No forms to email back. No templates to fill in Word. The organizer gets a branded registration link they forward to their group.</p>
+          </div>
+        </div>
+
+        <div class="gf-step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </div>
+
+        <div class="gf-step">
+          <div class="gf-step-number" aria-hidden="true">02</div>
+          <div class="gf-step-content">
+            <h3 class="gf-step-title">Their guests self-register.</h3>
+            <p class="gf-step-text">Arrival date, room category, meal plan, special requirements — filled directly by each guest. Data goes straight into GroupFlow. No inbox involved.</p>
+          </div>
+        </div>
+
+        <div class="gf-step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </div>
+
+        <div class="gf-step">
+          <div class="gf-step-number" aria-hidden="true">03</div>
+          <div class="gf-step-content">
+            <h3 class="gf-step-title">Your front desk exports clean data.</h3>
+            <p class="gf-step-text">PMS-ready CSV. Structured, complete, no manual entry. Guests update their own records if something changes — you see it immediately.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FEATURES ======================================= -->
+  <section class="section gf-features" id="features" aria-labelledby="gf-features-headline">
+    <div class="container">
+
+      <header class="gf-section-header reveal">
+        <span class="section-label">What's included</span>
+        <h2 class="section-headline" id="gf-features-headline">
+          Everything your front desk needs.<br>
+          <em>Nothing they don't.</em>
+        </h2>
+      </header>
+
+      <div class="gf-feature-grid reveal">
+
+        <div class="gf-feature-card">
+          <div class="gf-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101"/><path d="M14.828 10.172a4 4 0 015.656 0l4 4a4 4 0 01-5.656 5.656l-1.102-1.101"/></svg>
+          </div>
+          <h3 class="gf-feature-title">White-label registration form</h3>
+          <p class="gf-feature-text">Your hotel's branding. Guests see a professional form, not a generic tool.</p>
+        </div>
+
+        <div class="gf-feature-card">
+          <div class="gf-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="gf-feature-title">Real-time dashboard</h3>
+          <p class="gf-feature-text">See registrations as they come in. Track who's confirmed, who's pending, who's late.</p>
+        </div>
+
+        <div class="gf-feature-card">
+          <div class="gf-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="gf-feature-title">PMS-ready CSV export</h3>
+          <p class="gf-feature-text">One click to export. Clean columns, ready for your property management system.</p>
+        </div>
+
+        <div class="gf-feature-card">
+          <div class="gf-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </div>
+          <h3 class="gf-feature-title">Meal plan tracking</h3>
+          <p class="gf-feature-text">Full board, half board, B&B, dietary requirements — all captured at registration. No surprises at the restaurant.</p>
+        </div>
+
+        <div class="gf-feature-card">
+          <div class="gf-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3 class="gf-feature-title">Multi-language support</h3>
+          <p class="gf-feature-text">Guests register in their own language. Works for international groups — sport camps, tour groups, corporate travel.</p>
+        </div>
+
+        <div class="gf-feature-card">
+          <div class="gf-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h3 class="gf-feature-title">German hosting · GDPR-native</h3>
+          <p class="gf-feature-text">Hetzner, Nuremberg. European company. No US cloud. Guest data stays in Europe.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== WHO IT'S FOR =================================== -->
+  <section class="section gf-icp" id="who-its-for" aria-labelledby="gf-icp-headline">
+    <div class="container">
+
+      <header class="gf-section-header reveal">
+        <span class="section-label">Who it's for</span>
+        <h2 class="section-headline" id="gf-icp-headline">
+          Hotels that handle<br>
+          <em>organized groups regularly.</em>
+        </h2>
+      </header>
+
+      <div class="gf-icp-grid reveal">
+        <div class="gf-icp-card">
+          <div class="gf-icp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+          </div>
+          <h3>Sport camp hotels</h3>
+          <p>You host teams, academies, and training camps. Multiple groups per season. GroupFlow was built on this exact use case.</p>
+        </div>
+        <div class="gf-icp-card">
+          <div class="gf-icp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>School trip destinations</h3>
+          <p>Youth groups, educational travel, ski weeks. The organizer is always a teacher juggling 30 things. Make it easy for them and they'll rebook.</p>
+        </div>
+        <div class="gf-icp-card">
+          <div class="gf-icp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 9V7H2v5l10 5 10-5V9z"/><path d="M6 12v7"/><path d="M18 12v7"/><path d="M2 19h20"/></svg>
+          </div>
+          <h3>Tour group properties</h3>
+          <p>Travel agencies send groups. The rooming list changes up to check-in. GroupFlow gives you a live view instead of chasing emails.</p>
+        </div>
+        <div class="gf-icp-card">
+          <div class="gf-icp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <h3>Corporate retreat venues</h3>
+          <p>Companies book for off-sites and team events. High expectations for organization. GroupFlow makes you look as professional as they are.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== PROOF / TRUST ================================== -->
+  <section class="section gf-proof" id="proof" aria-labelledby="gf-proof-headline">
+    <div class="container">
+
+      <header class="gf-section-header reveal">
+        <span class="section-label">Why trust us</span>
+        <h2 class="section-headline" id="gf-proof-headline">
+          We didn't read about group travel.<br>
+          <em>We ran it for 30 years.</em>
+        </h2>
+      </header>
+
+      <div class="groupflow-proof reveal" style="margin-bottom: var(--space-xl);">
+        <div class="proof-item">
+          <div class="proof-num">5</div>
+          <div class="proof-label">FRESH editions run</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">200+</div>
+          <div class="proof-label">Participants managed</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">42</div>
+          <div class="proof-label">Countries represented</div>
+        </div>
+      </div>
+
+      <div class="gf-proof-context reveal">
+        <p>
+          REAL TEAM has been organizing group travel since 1994. Our parents ran school ski trips
+          and youth sport tournaments. We grew up in the bus, at the hotel, at the front desk.
+          GroupFlow is the tool we needed for our own sport camps in Mallorca — we built it
+          because nothing on the market fit how groups actually work.
+        </p>
+        <p class="gf-proof-pilot">
+          <strong>Status:</strong> Pre-customer. In active outreach with hotels across DACH and the Mediterranean.
+          If you run a hotel and this sounds familiar — we want to talk.
+        </p>
+      </div>
+
+      <div class="gf-proof-trust reveal">
+        {% include "partials/made-in-germany.njk" %}
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FAQ ============================================ -->
+  <section class="section gf-faq" id="faq" aria-labelledby="gf-faq-headline">
+    <div class="container">
+
+      <header class="gf-section-header reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-headline" id="gf-faq-headline">Honest answers.</h2>
+      </header>
+
+      <div class="gf-faq-list reveal">
+
+        <details class="gf-faq-item">
+          <summary class="gf-faq-question">What does it cost?</summary>
+          <div class="gf-faq-answer">
+            <p>GroupFlow starts at €99/month plus a one-time setup fee. Pricing scales with the number of active groups and additional features. Contact us for an exact quote — we don't do "request a pricing call" games.
+            <!-- [NEEDS FROM COMMANDER: confirm pricing — is €99/mo still the figure from WEBSITE_PLAN.md?] -->
+            </p>
+          </div>
+        </details>
+
+        <details class="gf-faq-item">
+          <summary class="gf-faq-question">How long does implementation take?</summary>
+          <div class="gf-faq-answer">
+            <p>Setup takes 1–2 days. We configure the registration form with your hotel's branding and preferred fields, connect the export format to your PMS, and you're live. No long onboarding projects.</p>
+          </div>
+        </details>
+
+        <details class="gf-faq-item">
+          <summary class="gf-faq-question">Which PMS systems do you support?</summary>
+          <div class="gf-faq-answer">
+            <p>GroupFlow exports a standardized CSV that can be imported into any PMS that accepts structured data. We test against common systems in the European hotel market. If you use something specific, tell us — we'll confirm compatibility before you sign.
+            <!-- [NEEDS FROM COMMANDER: specific PMS integrations to list here — Oracle OPERA, Protel, Mews, etc.?] -->
+            </p>
+          </div>
+        </details>
+
+        <details class="gf-faq-item">
+          <summary class="gf-faq-question">Is it GDPR-compliant?</summary>
+          <div class="gf-faq-answer">
+            <p>Yes. We're a European company (Slovak LLC, CK license since 1994). Hosted on Hetzner, Nuremberg — German servers, no US cloud. Guest data stays in Europe. We can provide a data processing agreement.</p>
+          </div>
+        </details>
+
+        <details class="gf-faq-item">
+          <summary class="gf-faq-question">Can we try it before committing?</summary>
+          <div class="gf-faq-answer">
+            <p>Yes. Request a demo and we'll walk you through a live group setup. If it fits, we'll run your next actual group through it — no fee, full support — so you can evaluate on real data.</p>
+          </div>
+        </details>
+
+        <details class="gf-faq-item">
+          <summary class="gf-faq-question">What if our groups are small — under 20 people?</summary>
+          <div class="gf-faq-answer">
+            <p>GroupFlow is designed for groups of 10–200. Small groups benefit equally — even 12 guests with different arrival dates and meal plans generates 20+ emails without a system. The value is real at any size above 10.</p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== CLOSING CTA ==================================== -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-contact-block reveal">
+        <div class="footer-contact-text">
+          <span class="section-label">Get in touch</span>
+          <h2 class="footer-contact-headline">How many hours does your front desk<br>spend on group bookings?</h2>
+          <p class="footer-contact-sub">
+            If the answer is "too many" — we should talk. We'll show you how GroupFlow works
+            and whether it fits your hotel.
+          </p>
+        </div>
+        <div class="footer-contact-cta">
+          <a href="mailto:info@realteamdigital.sk?subject=GroupFlow%20demo%20request" class="btn btn-primary">Request a demo</a>
+          <div class="footer-email-note">info@realteamdigital.sk</div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo" aria-label="REAL TEAM Digital">
+            <div class="footer-logo-mark" aria-hidden="true">RT</div>
+            <span class="footer-logo-text">REAL TEAM Digital</span>
+          </div>
+          <p class="footer-tagline">
+            Tech company from the travel industry. We build what we couldn't find.
+          </p>
+          <p class="footer-company-detail">
+            Branch of REAL TEAM, s.r.o.<br>
+            Company ID: 31&nbsp;369&nbsp;049<br>
+            CK travel agency license since 1994
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Products</div>
+          <nav class="footer-links" aria-label="Products">
+            <a href="/groupflow/">GroupFlow</a>
+            <a href="/gymflow/">GymFlow</a>
+            <a href="/creatorflow/">CreatorFlow</a>
+            <a href="/circleflow/">CircleFlow</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-trust-row">
+        {% include "partials/made-in-germany.njk" %}
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 REAL TEAM Digital. Branch of
+          <a href="https://realteamsport.de" target="_blank" rel="noopener">REAL TEAM, s.r.o.</a>
+        </p>
+        <p class="footer-copy" style="color: var(--clr-dimmed);">realteamdigital.sk</p>
+      </div>
+
+    </div>
+  </footer>
