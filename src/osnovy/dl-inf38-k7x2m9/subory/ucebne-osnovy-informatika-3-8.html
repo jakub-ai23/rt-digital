@@ -1,0 +1,1831 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Učebné osnovy – Informatika (3.–8. ročník ZŠ)</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --muted:#5b6470; --line:#c9d1da; --line2:#e6ebf0;
+    --head:#1f3a5f; --headbg:#eaf0f7; --accent:#2b6cb0; --zebra:#f7f9fc;
+    --hours:#0f5132; --hoursbg:#e7f3ec; --navbg:#1f3a5f;
+  }
+  *{box-sizing:border-box}
+  body{font-family:"Segoe UI",-apple-system,Roboto,Arial,sans-serif;color:var(--ink);
+       margin:0;padding:0 0 60px;background:#f2f5f8;line-height:1.4;font-size:13px}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 16px}
+  .doc-head{background:#fff;border-bottom:3px solid var(--head);padding:24px 0 16px;margin-bottom:0}
+  .doc-head .wrap{padding-top:0}
+  h1{font-size:24px;margin:0 0 4px;color:var(--head);letter-spacing:.2px}
+  .doc-head .sub{color:var(--muted);font-size:14px}
+  .intro{background:#fff;border:1px solid var(--line2);border-radius:10px;padding:16px 18px;margin:18px 0;font-size:12.5px;color:#3a444f}
+  .intro b{color:var(--head)}
+  .intro .warn{background:#fff8e6;border:1px solid #f0d98c;border-radius:8px;padding:9px 13px;margin-top:10px;color:#665417}
+  nav.grades{position:sticky;top:0;z-index:20;background:var(--navbg);box-shadow:0 2px 8px rgba(0,0,0,.15)}
+  nav.grades .wrap{display:flex;gap:6px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  nav.grades a{color:#dbe6f3;text-decoration:none;font-weight:600;font-size:13px;
+       padding:6px 14px;border-radius:6px;transition:background .15s}
+  nav.grades a:hover{background:rgba(255,255,255,.14);color:#fff}
+  section.grade{background:#fff;border:1px solid var(--line2);border-radius:10px;
+       margin:22px 0;padding:16px 16px 20px;scroll-margin-top:52px;overflow:hidden}
+  .grade-head h2{font-size:19px;color:var(--head);margin:2px 0 4px;
+       border-bottom:2px solid var(--headbg);padding-bottom:8px}
+  .grade-meta{color:var(--muted);font-size:12.5px;margin-bottom:10px}
+  .grade-meta b{color:var(--head)}
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+  table{border-collapse:collapse;width:100%;min-width:1320px;table-layout:fixed}
+  col.c-celok{width:11%} col.c-vykon{width:18%} col.c-obsah{width:21%} col.c-vystup{width:13%}
+  col.c-medzi{width:11%} col.c-prierez{width:9%} col.c-metody{width:12%} col.c-hod{width:5%}
+  th,td{border:1px solid var(--line);vertical-align:top;padding:7px 8px}
+  thead th{background:var(--headbg);color:var(--head);font-size:11px;position:sticky;top:0;
+       text-transform:uppercase;letter-spacing:.3px;text-align:left}
+  tbody tr:nth-child(even){background:var(--zebra)}
+  .okruh{font-weight:700;color:var(--head);display:block;margin-bottom:2px;font-size:12.5px}
+  .celok{color:var(--accent);font-weight:600;font-size:12px}
+  td.hod{text-align:center;font-weight:700;color:var(--hours);background:var(--hoursbg);font-size:15px}
+  ul{margin:1px 0 4px;padding-left:15px}
+  li{margin:1px 0}
+  .lbl{font-weight:700;color:var(--muted);font-size:10.5px;text-transform:uppercase;
+       letter-spacing:.2px;display:block;margin:5px 0 1px}
+  .lbl:first-child{margin-top:0}
+  tfoot td{background:var(--head);color:#fff;font-weight:700;font-size:14px;padding:9px}
+  tfoot td.hod{background:#0f5132;color:#fff}
+  .src{background:#fff;border:1px solid var(--line2);border-radius:10px;padding:14px 18px;
+       margin:22px 0 0;font-size:11.5px;color:var(--muted)}
+  .src b{color:var(--head)}
+  .teacher-note{background:#f0f6ff;border:1px solid #cfe0f5;border-left:4px solid var(--accent);
+       border-radius:8px;padding:11px 15px;margin:14px 2px 2px;font-size:12px;color:#33465c}
+  .teacher-note h4{margin:0 0 6px;font-size:12px;color:var(--head);text-transform:uppercase;letter-spacing:.4px}
+  .teacher-note ul{margin:0;padding-left:18px}
+  .teacher-note li{margin:3px 0}
+  @media print{
+    body{background:#fff;font-size:9.5px} @page{size:A4 landscape;margin:8mm}
+    nav.grades{display:none} section.grade{break-inside:auto;border:none;margin:0 0 10px;padding:0}
+    .tbl-wrap{overflow:visible;border:none} table{min-width:0}
+    thead th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    td.hod,tfoot td,.intro .warn{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section.grade{page-break-before:always} section#rocnik-3{page-break-before:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="doc-head">
+  <div class="wrap">
+    <h1>Učebné osnovy – INFORMATIKA</h1>
+    <div class="sub">Základná škola, 3.–8. ročník &nbsp;·&nbsp; inovovaný Štátny vzdelávací program (2015) &nbsp;·&nbsp; <b>verzia 2 — zapracovaný Dodatok č. 17 (AI gramotnosť)</b></div>
+  </div>
+</header>
+
+<nav class="grades">
+  <div class="wrap">
+    <a href="#rocnik-3">3. ročník</a>
+    <a href="#rocnik-4">4. ročník</a>
+    <a href="#rocnik-5">5. ročník</a>
+    <a href="#rocnik-6">6. ročník</a>
+    <a href="#rocnik-7">7. ročník</a>
+    <a href="#rocnik-8">8. ročník</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="intro">
+    <b>Predmet:</b> Informatika &nbsp;·&nbsp; <b>Vzdelávacia oblasť:</b> Matematika a práca s informáciami &nbsp;·&nbsp;
+    <b>Hodinová dotácia:</b> 1 h/týždeň (33 h/rok) v každom ročníku 3.–8. podľa Rámcového učebného plánu pre ZŠ.
+    <div class="warn">
+      <b>Poznámka k rozloženiu:</b> Inovovaný ŠVP definuje výkonový a obsahový štandard informatiky
+      <b>spoločne pre dvojice ročníkov</b> (3.–4., 5.–6., 7.–8.; výkony sú formulované „žiak na konci
+      4./6./8. ročníka vie/dokáže"). Rozdelenie tematických celkov do jednotlivých ročníkov a počty hodín
+      sú <b>návrhom v rámci školského vzdelávacieho programu (ŠkVP)</b> s odstupňovaním náročnosti (vyšší
+      ročník = náročnejšie). Text výkonového a obsahového štandardu je prevzatý verne zo ŠVP. 9. ročník
+      informatiku v povinnej časti RUP nemá (možno doplniť z disponibilných hodín).
+    </div>
+    <div class="warn" style="background:#eef7f0;border-color:#bfe0c8;color:#245a37">
+      <b>Nová verzia — Dodatok č. 17 (schválený 23. 2. 2026, účinný od 1. 3. 2026):</b> zapracovaná nová
+      prierezová téma <b>AI gramotnosť (AIG)</b> — rozvíja porozumenie princípom fungovania AI, kritické
+      posudzovanie jej výstupov a zodpovedné, bezpečné a etické používanie vrátane digitálneho wellbeingu.
+      Realizuje sa <b>integráciou</b> do vyučovania (nie ako samostatný predmet ani celok s hodinami); v tabuľkách
+      je označená kódom <b>AIG</b> pri príslušných tematických celkoch a rozpísaná v poznámkach pre učiteľa
+      v každom ročníku (veku primerane).
+      <div style="margin-top:7px;font-size:11.5px;color:#3a444f">
+        <b>Prierezové témy (skratky):</b> AIG – AI gramotnosť · OSR – osobnostný a sociálny rozvoj ·
+        MEV – mediálna výchova · MUV – multikultúrna výchova · ENV – environmentálna výchova ·
+        OŽZ – ochrana života a zdravia · DOV – dopravná výchova · RVĽK – regionálna výchova a ľudová kultúra ·
+        TPPZ – tvorba projektu a prezentačné zručnosti · FG – finančná gramotnosť.
+      </div>
+    </div>
+  </div>
+<section class="grade" id="rocnik-3">
+  <div class="grade-head">
+    <h2>3. ročník</h2>
+    <div class="grade-meta"><b>Hodinová dotácia:</b> 1 h/týždeň = 33 h/rok &nbsp;·&nbsp; <b>Stupeň:</b> 1. stupeň ZŠ &nbsp;·&nbsp; <b>Oblasť:</b> Matematika a práca s informáciami</div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup>
+      <col class="c-celok"><col class="c-vykon"><col class="c-obsah"><col class="c-vystup">
+      <col class="c-medzi"><col class="c-prierez"><col class="c-metody"><col class="c-hod">
+    </colgroup>
+    <thead><tr>
+      <th>Tematický celok</th><th>Výkonový štandard</th><th>Obsahový štandard</th>
+      <th>Výkon na konci celku</th><th>Medzipredmetové vzťahy</th><th>Prierezové témy</th>
+      <th>Metódy a formy</th><th>Hod.</th>
+    </tr></thead>
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">počítač a prídavné zariadenia</span></td>
+        <td>
+          <ul>
+            <li>pracovať so základným hardvérom na používateľskej úrovni: ovládať programy myšou, písať na klávesnici.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> rôzna funkčnosť klávesov (písmená, čísla, šípky, enter, medzera, shift, delete, diakritika, …)
+          <span class="lbl">Procesy</span> pohyb, klikanie a ťahanie myšou, ovládanie kurzora na obrazovke
+        </td>
+        <td>Žiak samostatne ovláda počítač myšou a klávesnicou – pohybuje kurzorom, kliká, ťahá a napíše krátky text vrátane diakritiky.</td>
+        <td>Slovenský jazyk a literatúra – písmená, diakritika, opis na klávesnici; Matematika – číslice na klávesnici.</td>
+        <td>OSR, OŽZ</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, motivačný rozhovor. Formy: frontálna, individuálna.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca v operačnom systéme</span></td>
+        <td>
+          <ul>
+            <li>spustiť program/aplikáciu, ukončiť bežiacu aplikáciu a otvoriť v nej dokument,</li>
+            <li>prihlásiť sa a odhlásiť sa z programu/aplikácie.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> aplikácia, ikona, okno, pracovná plocha
+          <span class="lbl">Vlastnosti a vzťahy</span> ikona ako reprezentácia programu alebo dokumentu
+        </td>
+        <td>Žiak spustí a ukončí aplikáciu, otvorí v nej dokument a orientuje sa na pracovnej ploche pomocou ikon a okien.</td>
+        <td>Slovenský jazyk a literatúra – čítanie názvov aplikácií a ikon; Výtvarná výchova – spustenie kresliaceho programu.</td>
+        <td>OSR</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači, práca s návodom. Formy: frontálna, individuálna.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca so súbormi a priečinkami</span></td>
+        <td>
+          <ul>
+            <li>uložiť produkt do súboru podľa pokynov,</li>
+            <li>otvoriť rozpracovaný produkt zo súboru podľa pokynov.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> súbor, priečinok
+          <span class="lbl">Vlastnosti a vzťahy</span> v súbore je uložený nejaký obsah; rôzne typy súborov pre rôzne typy informácií (súbor s obrázkom, súbor s textom)
+          <span class="lbl">Procesy</span> vytvorenie, ukladanie dokumentov
+        </td>
+        <td>Žiak podľa pokynov uloží svoju prácu do súboru a neskôr ju znova otvorí; rozlíši súbor a priečinok.</td>
+        <td>Slovenský jazyk a literatúra – pomenovanie a triedenie súborov; Matematika – triedenie a usporiadanie objektov.</td>
+        <td>OSR</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači, práca s návodom. Formy: frontálna, individuálna.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s grafikou (kreslenie)</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje editora na tvorbu a úpravu obrázkov,</li>
+            <li>nájsť, odhaliť a opraviť chyby pri úprave obrázkov.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Procesy</span> kreslenie čiary, úsečky, obdĺžnika, štvorca, oválu, kruhu; používanie výplne, farby, palety farieb; nastavovanie hrúbky čiary; omaľovanie, pečiatkovanie, dokresľovanie; kreslenie základných geometrických tvarov; označovanie, presúvanie a kopírovanie oblasti
+        </td>
+        <td>Žiak nakreslí a upraví jednoduchý obrázok pomocou nástrojov grafického editora (čiary, tvary, výplň, farby) a opraví v ňom chyby.</td>
+        <td>Výtvarná výchova – kompozícia, farba, geometrické tvary; Matematika – základné geometrické útvary (čiara, štvorec, kruh).</td>
+        <td>OSR, MEV</td>
+        <td>Metódy: motivačný rozhovor, demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">7</td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s textom</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje editora na tvorbu a úpravu textu,</li>
+            <li>zašifrovať a rozšifrovať text podľa jednoduchých pravidiel (reprezentovať znaky a slová).</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> malé a veľké písmeno, znak, slovo, veta, symboly, číslica; znaky ako písmená, číslice, špeciálne znaky a symboly
+          <span class="lbl">Vlastnosti a vzťahy</span> slovo ako skupina písmen, veta ako skupina slov, odsek ako skupina viet; medzery a oddeľovače; obrázok a text; formátovanie textu; písmo (typ, veľkosť, hrúbka a farba); zarovnanie odseku; text ako postupnosť znakov
+          <span class="lbl">Procesy</span> písanie na klávesnici, opravovanie, mazanie, výmena slov; vkladanie obrázkov (cez schránku); vloženie a odstránenie medzery
+        </td>
+        <td>Žiak napíše a upraví krátky text (opravy, medzery, jednoduché formátovanie) a jednoduchým pravidlom zašifruje a rozšifruje slovo.</td>
+        <td>Slovenský jazyk a literatúra – písmeno, slovo, veta, odsek, pravopis; Matematika – kódovanie a šifrovanie znakov.</td>
+        <td>OSR, MEV</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh, hranie rolí (šifrovanie). Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">5</td>
+      </tr>
+
+      <!-- 6 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">analýza problému</span></td>
+        <td>
+          <ul>
+            <li>navrhnúť riešenie, vyjadriť plán riešenia,</li>
+            <li>rozhodnúť sa o pravdivosti/nepravdivosti tvrdenia (výroku),</li>
+            <li>vybrať prvky alebo možnosti podľa pravdivosti tvrdenia,</li>
+            <li>uvažovať o rôznych riešeniach.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> pravda – nepravda, platí – neplatí, áno/alebo/nie (neformálne)
+          <span class="lbl">Procesy</span> idea sekvencie príkazov; rozhodovanie o pravdivosti tvrdenia
+        </td>
+        <td>Žiak posúdi, či je jednoduché tvrdenie pravdivé alebo nepravdivé, a navrhne plán riešenia jednoduchej úlohy.</td>
+        <td>Matematika – pravdivosť výrokov, logické uvažovanie, postupnosť krokov; Slovenský jazyk a literatúra – formulovanie plánu vlastnými slovami.</td>
+        <td>OSR</td>
+        <td>Metódy: riadený rozhovor/diskusia, heuristická metóda, riešenie problémových úloh, brainstorming. Formy: frontálna, skupinová, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 7 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">interaktívne zostavovanie riešenia</span></td>
+        <td>
+          <ul>
+            <li>riešiť problém priamym riadením vykonávateľa (napr. robot, korytnačka),</li>
+            <li>aplikovať elementárne príkazy daného jazyka (zo slovníka príkazov) na riadenie vykonávateľa.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> priamy príkaz – akcia vykonávateľa
+          <span class="lbl">Procesy</span> riadenie vykonávateľa v priamom režime; používať jazyk vykonávateľa
+        </td>
+        <td>Žiak priamymi príkazmi ovláda vykonávateľa (robot, korytnačka) a dovedie ho k cieľu.</td>
+        <td>Matematika – orientácia v priestore, smer a pohyb, súradnice mriežky; Telesná a športová výchova – orientácia vľavo/vpravo, vpred/vzad.</td>
+        <td>OSR, OŽZ</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh, heuristická metóda. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">bezpečnosť a riziká</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o rizikách na internete.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Procesy</span> bezpečné správanie sa na internete
+        </td>
+        <td>Žiak vlastnými slovami vysvetlí základné riziká na internete a pravidlá bezpečného správania.</td>
+        <td>Etická výchova – pravidlá správania a rešpekt voči druhým; Slovenský jazyk a literatúra – diskusia, vyjadrenie názoru.</td>
+        <td>AIG, OŽZ, MEV, OSR</td>
+        <td>Metódy: motivačný rozhovor, riadený rozhovor/diskusia, hranie rolí. Formy: frontálna, skupinová.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 9 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">digitálne technológie v spoločnosti</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o digitálnych technológiách, o ich kladoch i záporoch,</li>
+            <li>diskutovať o využití konkrétnych nástrojov digitálnych technológií pri učení sa iných predmetov, aj o tom, ako pomáhajú učiteľovi a žiakovi.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> hry, filmy, hudba
+          <span class="lbl">Vlastnosti a vzťahy</span> digitálne technológie okolo nás (aj keď na prvý pohľad nevyzerajú ako zariadenia s procesorom); digitálne technológie ako nástroje pre komunikáciu; digitálne technológie doma, v škole
+          <span class="lbl">Procesy</span> používanie nástrojov na vlastné učenie sa, zábavu a spoznávanie
+        </td>
+        <td>Žiak uvedie príklady digitálnych technológií okolo seba a diskutuje o ich kladoch, záporoch a využití pri učení.</td>
+        <td>Prvouka – technológie v domácnosti a v okolí; Etická výchova – zodpovedné využívanie technológií; Hudobná výchova – hudba ako digitálny obsah.</td>
+        <td>AIG, MEV, OSR, ENV</td>
+        <td>Metódy: motivačný rozhovor, riadený rozhovor/diskusia, brainstorming, práca s textom. Formy: frontálna, skupinová.</td>
+        <td class="hod">3</td>
+      </tr>
+
+    </tbody>
+    <tfoot><tr><td colspan="7">SPOLU – 3. ročník</td><td class="hod">33</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="teacher-note">
+    <h4>Poznámky pre učiteľa</h4>
+    <ul>
+      <li>Prihlásenie do konta (napr. MS 365) je pre treťiakov pomalé — zavádzajte ho <b>postupne</b>: prvé hodiny len prihlásenie/odhlásenie ako hru. Pomôžu QR-kód / obrázkové heslo (Picture Password) alebo zalaminované kartičky s údajmi veľkým písmom. ŠVP neviaže obsah na konkrétne konto.</li>
+      <li>Veľa cieľov (kreslenie, písanie) sa dá robiť aj v <b>lokálnej aplikácii bez prihlasovania</b>; plné konto zaveďte, keď deti ovládajú myš a klávesnicu.</li>
+      <li>Šifrovanie a dešifrovanie robte hravo — tajné odkazy vo dvojiciach (číselná či obrázková abeceda, posun písmen).</li>
+      <li>Rátajte s pomalším písaním na klávesnici; nechajte deťom dostatok času, nehodnoťte rýchlosť.</li>
+          <li><b>AI gramotnosť</b> (nová prierezová téma, Dodatok č. 17): v tomto veku hravo — AI ako pomocník pod vedením učiteľa, hodnota skutočného sveta a medziľudských vzťahov, digitálny wellbeing (primerané hranice pri obrazovke).</li>
+    </ul>
+  </div>
+</section>
+<section class="grade" id="rocnik-4">
+  <div class="grade-head">
+    <h2>4. ročník</h2>
+    <div class="grade-meta"><b>Hodinová dotácia:</b> 1 h/týždeň = 33 h/rok &nbsp;·&nbsp; <b>Stupeň:</b> 1. stupeň ZŠ &nbsp;·&nbsp; <b>Oblasť:</b> Matematika a práca s informáciami</div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup>
+      <col class="c-celok"><col class="c-vykon"><col class="c-obsah"><col class="c-vystup">
+      <col class="c-medzi"><col class="c-prierez"><col class="c-metody"><col class="c-hod">
+    </colgroup>
+    <thead><tr>
+      <th>Tematický celok</th><th>Výkonový štandard</th><th>Obsahový štandard</th>
+      <th>Výkon na konci celku</th><th>Medzipredmetové vzťahy</th><th>Prierezové témy</th>
+      <th>Metódy a formy</th><th>Hod.</th>
+    </tr></thead>
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s grafikou (animácie)</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje editora na tvorbu a úpravu obrázkov a animácií,</li>
+            <li>nájsť, odhaliť a opraviť chyby pri úprave obrázkov aj animácií.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> oblasť, animácia
+          <span class="lbl">Vlastnosti a vzťahy</span> animácia ako postupnosť obrázkov
+          <span class="lbl">Procesy</span> označovanie, presúvanie a kopírovanie oblasti; spustenie a zastavenie animácie; krokovanie a prepínanie sa medzi obrázkami animácie; kreslenie obrázkov animácie
+        </td>
+        <td>Žiak vytvorí jednoduchú animáciu ako postupnosť obrázkov, spustí a zastaví ju, krokuje medzi snímkami a odhalí a opraví chybu v obrázkoch aj v animácii.</td>
+        <td>Výtvarná výchova – kompozícia, pohyb, farba; Slovenský jazyk – príbehový obsah animácie.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s príbehmi</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje editora na tvorbu a úpravu príbehov.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> snímka
+          <span class="lbl">Vlastnosti a vzťahy</span> snímky a ich poradie
+          <span class="lbl">Procesy</span> vytváranie príbehov, vloženie novej snímky, vloženie textu, vloženie obrázka, spustenie a zastavenie
+        </td>
+        <td>Žiak zostaví jednoduchý príbeh z niekoľkých snímok v správnom poradí, doplní do nich text a obrázok a príbeh spustí i zastaví.</td>
+        <td>Slovenský jazyk a literatúra – stavba príbehu, postupnosť deja; Výtvarná výchova – ilustrácia snímky.</td>
+        <td>MEV, OSR, TPPZ</td>
+        <td>Metódy: motivačný rozhovor, demonštrácia, projektová metóda, praktické cvičenie na počítači. Formy: individuálna, skupinová, projektová.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s multimédiami</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje na prehratie zvukov,</li>
+            <li>použiť konkrétne nástroje na prehratie videa.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> zvuk, hlas, hudba, prehrávač zvukov, video, prehrávač videa
+          <span class="lbl">Vlastnosti a vzťahy</span> hlasitosť zvuku
+          <span class="lbl">Procesy</span> prehrávanie, spustenie a zastavenie zvuku, nastavenie hlasitosti, spustenie prehrávanie a zastavenie videa
+        </td>
+        <td>Žiak samostatne prehrá zvuk a video, spustí a zastaví ich a nastaví hlasitosť prehrávania.</td>
+        <td>Hudobná výchova – zvuk, hudba, hlasitosť; Slovenský jazyk – hovorené slovo, počúvanie s porozumením.</td>
+        <td>MEV, OŽZ</td>
+        <td>Metódy: demonštrácia, riadený rozhovor, praktické cvičenie na počítači. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">informácie</span></td>
+        <td>
+          <ul>
+            <li>zakódovať informáciu podľa pokynov do konkrétnej reprezentácie,</li>
+            <li>dekódovať informáciu z jednoduchých reprezentácií,</li>
+            <li>zvoliť si nástroj z danej skupiny nástrojov pre danú konkrétnu situáciu, problém.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> vzťahy medzi jednotlivými typmi informácie, text a grafika
+        </td>
+        <td>Žiak podľa pokynov zakóduje informáciu do zvolenej reprezentácie a spätne ju dekóduje; k danej úlohe si vyberie vhodný nástroj.</td>
+        <td>Matematika – kódy, symboly, priraďovanie; Slovenský jazyk – text ako nositeľ informácie.</td>
+        <td>AIG, OSR, MEV</td>
+        <td>Metódy: riešenie problémových úloh, heuristická metóda, praktické cvičenie na počítači. Formy: individuálna, skupinová.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">štruktúry</span></td>
+        <td>
+          <ul>
+            <li>orientovať sa v jednoduchej štruktúre – vyhľadávať a získavať informácie z jednoduchej štruktúry podľa zadaných kritérií,</li>
+            <li>organizovať informácie do štruktúr – podľa zadania vytvárať jednoduché štruktúry údajov, podľa konkrétnych jednoduchých pravidiel manipulovať so štruktúrami údajov,</li>
+            <li>interpretovať údaje zo štruktúr – prerozprávať informácie z jednoduchej štruktúry vlastnými slovami.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> postupnosť, tabuľka (v zmysle frekvenčná a kódovacia tabuľka, slovník, mriežka), riadok, stĺpec
+          <span class="lbl">Vlastnosti a vzťahy</span> poradie objektov, pozícia v postupnosti, pozícia objektov v tabuľke, význam postupnosti a tabuľky
+          <span class="lbl">Procesy</span> práca s grafovými štruktúrami (s mapou, labyrintom, sieťou), zapisovanie, vyhľadávanie v jednoduchej štruktúre
+        </td>
+        <td>Žiak vyhľadá údaj v jednoduchej postupnosti alebo tabuľke podľa kritéria, sám vytvorí jednoduchú štruktúru a jej obsah prerozpráva vlastnými slovami.</td>
+        <td>Matematika – tabuľky, riadok a stĺpec, postupnosti; Vlastiveda – orientácia v mape a mriežke.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: riešenie problémových úloh, heuristická metóda, práca s návodom, praktické cvičenie na počítači. Formy: individuálna, práca vo dvojiciach, skupinová.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 6 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">práca s webovou stránkou</span></td>
+        <td>
+          <ul>
+            <li>použiť nástroje na prezeranie webových stránok,</li>
+            <li>získať informácie z webových stránok.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> webová stránka, odkaz, prehliadač
+          <span class="lbl">Vlastnosti a vzťahy</span> adresa stránky identifikuje konkrétnu stránku a súvisí s jej obsahom a zobrazením; odkazy ako prepojenia na webové stránky a súbory; prehliadač ako nástroj na zobrazovanie webových stránok
+          <span class="lbl">Procesy</span> orientácia na webovej stránke, medzi webovými stránkami, používanie odkazov na iné webové stránky, návrat na predchádzajúcu navštívenú stránku
+        </td>
+        <td>Žiak otvorí webovú stránku v prehliadači, pohybuje sa po nej pomocou odkazov, vráti sa na predchádzajúcu stránku a nájde na nej požadovanú informáciu.</td>
+        <td>Slovenský jazyk – čítanie s porozumením; Vlastiveda – získavanie informácií o okolí.</td>
+        <td>MEV, OŽZ</td>
+        <td>Metódy: demonštrácia, riadený rozhovor, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 7 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">vyhľadávanie na webe</span></td>
+        <td>
+          <ul>
+            <li>vyhľadať a získať informáciu na zadaných stránkach internetu,</li>
+            <li>diskutovať o výsledkoch vyhľadávania,</li>
+            <li>posúdiť správnosť výsledku.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> vyhľadávač
+          <span class="lbl">Procesy</span> vyhľadávanie obrázkov na zadaných stránkach, vyhľadávanie v mapách na internete
+        </td>
+        <td>Žiak na zadaných stránkach vyhľadá informáciu alebo obrázok, o výsledku diskutuje a posúdi jeho správnosť.</td>
+        <td>Slovenský jazyk – kritické čítanie, posúdenie zdroja; Vlastiveda – vyhľadávanie v mapách.</td>
+        <td>AIG, MEV, OSR, OŽZ</td>
+        <td>Metódy: riadený rozhovor/diskusia, riešenie problémových úloh, praktické cvičenie na počítači. Formy: individuálna, skupinová.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">práca s nástrojmi na komunikáciu (e-mail)</span></td>
+        <td>
+          <ul>
+            <li>zostaviť a posielať správu danému príjemcovi prostredníctvom konkrétneho e-mailového nástroja,</li>
+            <li>nájsť a zobraziť prijatú správu od konkrétneho odosielateľa prostredníctvom konkrétneho e-mailového nástroja,</li>
+            <li>zhodnotiť správnosť e-mailovej adresy.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> správa, email, e-mailová adresa, kôš
+          <span class="lbl">Vlastnosti a vzťahy</span> e-mail ako správa pre adresáta, adresát, e-mail a program na prácu s e-mailom
+          <span class="lbl">Procesy</span> zadanie adresy, predmetu správy, napísanie emailu, odoslanie emailu, prijatie emailu, vymazanie emailu, dodržiavanie netikety
+        </td>
+        <td>Žiak napíše a odošle e-mail danému príjemcovi, nájde a zobrazí prijatú správu, posúdi správnosť e-mailovej adresy a dodržiava zásady netikety.</td>
+        <td>Slovenský jazyk – písomný prejav, oslovenie, zdvorilosť; Etická výchova – pravidlá slušnej komunikácie.</td>
+        <td>MEV, OSR, OŽZ</td>
+        <td>Metódy: demonštrácia, hranie rolí, praktické cvičenie na počítači, práca s návodom. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 9 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou postupnosti príkazov (prvé skladanie príkazov)</span></td>
+        <td>
+          <ul>
+            <li>riešiť problém skladaním príkazov do postupnosti,</li>
+            <li>doplniť, dokončiť, modifikovať rozpracované riešenie,</li>
+            <li>interpretovať postupnosť príkazov,</li>
+            <li>vyhľadať chybu v postupnosti príkazov.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> príkaz, parameter príkazu, postupnosť príkazov
+          <span class="lbl">Vlastnosti a vzťahy</span> ako súvisí príkaz/poradie príkazov a výsledok
+          <span class="lbl">Procesy</span> zostavenie a upravenie príkazu/príkazov, vyhodnotenie postupnosti príkazov
+        </td>
+        <td>Žiak vyrieši úlohu poskladaním príkazov do postupnosti, rozpracované riešenie doplní a upraví, postupnosť interpretuje a nájde v nej chybu.</td>
+        <td>Matematika – postupnosť krokov, logické uvažovanie; Telesná výchova – sled pohybových pokynov.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: riešenie problémových úloh, heuristická metóda, demonštrácia, praktické cvičenie na počítači. Formy: individuálna, práca vo dvojiciach, skupinová.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 10 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">interpretácia zápisu riešenia</span></td>
+        <td>
+          <ul>
+            <li>realizovať návod, postup, algoritmus riešenia úlohy – interpretovať ho, krokovať riešenie, simulovať činnosť vykonávateľa.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Procesy</span> krokovanie
+        </td>
+        <td>Žiak podľa daného návodu odkrokuje riešenie úlohy a simuluje činnosť vykonávateľa krok za krokom.</td>
+        <td>Matematika – postup výpočtu krok za krokom; Slovenský jazyk – porozumenie návodu.</td>
+        <td>OSR</td>
+        <td>Metódy: demonštrácia, práca s návodom, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 11 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">hľadanie, opravovanie chýb</span></td>
+        <td>
+          <ul>
+            <li>vyhľadať chybu vo výsledku po vykonaní algoritmu,</li>
+            <li>nájsť a opraviť chybu v návode, v zápise riešenia,</li>
+            <li>diskutovať o svojich riešeniach.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> chyba ako zlý výsledok, chyba v návode
+          <span class="lbl">Procesy</span> rozpoznanie chyby
+        </td>
+        <td>Žiak rozpozná chybu vo výsledku aj v návode, opraví ju a o svojom riešení vecne diskutuje.</td>
+        <td>Matematika – kontrola a oprava postupu; Etická výchova – konštruktívna spätná väzba.</td>
+        <td>OSR</td>
+        <td>Metódy: riadený rozhovor/diskusia, riešenie problémových úloh, praktické cvičenie na počítači. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 12 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca v počítačovej sieti a na internete</span></td>
+        <td>
+          <ul>
+            <li>rozlíšiť e-mailovú a webovú adresu.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> internet ako celosvetová počítačová sieť
+        </td>
+        <td>Žiak vysvetlí internet ako celosvetovú sieť počítačov a rozlíši e-mailovú adresu od webovej adresy.</td>
+        <td>Vlastiveda – spojenie a komunikácia vo svete; Slovenský jazyk – čítanie a rozlišovanie adries.</td>
+        <td>MEV, OŽZ</td>
+        <td>Metódy: výklad, riadený rozhovor, demonštrácia. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 13 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">legálnosť používania</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o princípoch dodržiavania základných autorských práv.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> autorské právo a jeho vzťah k autorovi, dielu a použitiu
+          <span class="lbl">Procesy</span> legálnosť a nelegálnosť používania informácií (obrázky, hudba, filmy)
+        </td>
+        <td>Žiak vlastnými slovami vysvetlí základné autorské práva a rozlíši legálne a nelegálne používanie obrázkov, hudby a filmov.</td>
+        <td>Etická výchova – rešpekt k práci iných; Výtvarná/Hudobná výchova – autor a jeho dielo.</td>
+        <td>AIG, MEV, OSR, FG</td>
+        <td>Metódy: motivačný rozhovor, riadený rozhovor/diskusia, brainstorming. Formy: frontálna, skupinová.</td>
+        <td class="hod">2</td>
+      </tr>
+
+    </tbody>
+    <tfoot><tr><td colspan="7">SPOLU – 4. ročník</td><td class="hod">33</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="teacher-note">
+    <h4>Poznámky pre učiteľa</h4>
+    <ul>
+      <li>E-mail a komunikáciu preberajte s dôrazom na <b>bezpečnosť a netiketu</b> (neotvárať prílohy od neznámych, slušný tón). Ideálne v školskom alebo uzavretom prostredí.</li>
+      <li>Vyhľadávanie na webe: učte posúdiť, či výsledok zodpovedá otázke (prvý odkaz nemusí byť správny).</li>
+      <li>Postupnosti príkazov a krokovanie skúšajte aj „odpojene“ (robot alebo žiak sa pohybuje po triede podľa príkazov), až potom v aplikácii.</li>
+          <li><b>AI gramotnosť</b>: aj výsledok z AI/vyhľadávania treba overiť; AI nenahrádza vlastnú prácu a tvorivosť; rešpekt k autorstvu.</li>
+    </ul>
+  </div>
+</section>
+<section class="grade" id="rocnik-5">
+  <div class="grade-head">
+    <h2>5. ročník</h2>
+    <div class="grade-meta"><b>Hodinová dotácia:</b> 1 h/týždeň = 33 h/rok &nbsp;·&nbsp; <b>Stupeň:</b> 2. stupeň ZŠ &nbsp;·&nbsp; <b>Oblasť:</b> Matematika a práca s informáciami</div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup>
+      <col class="c-celok"><col class="c-vykon"><col class="c-obsah"><col class="c-vystup">
+      <col class="c-medzi"><col class="c-prierez"><col class="c-metody"><col class="c-hod">
+    </colgroup>
+    <thead><tr>
+      <th>Tematický celok</th><th>Výkonový štandard</th><th>Obsahový štandard</th>
+      <th>Výkon na konci celku</th><th>Medzipredmetové vzťahy</th><th>Prierezové témy</th>
+      <th>Metódy a formy</th><th>Hod.</th>
+    </tr></thead>
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s grafikou (obrázok v rastri, animácie)</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje editora na tvorbu a úpravu obrázkov a animácií,</li>
+            <li>hľadať, odhaľovať a opraviť chyby pri úprave obrázkov aj animácií,</li>
+            <li>kombinovať rôzne typy zdrojov grafiky,</li>
+            <li>skúmať nové nástroje v konkrétnom editore.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> oblasť, animácia
+          <span class="lbl">Vlastnosti a vzťahy</span> obrázok ako štvorcová mriežka, priehľadnosť, obrázok v rastri, animácia ako postupnosť obrázkov, dĺžka trvania (dĺžka zobrazenia obrázkov na obrazovke)
+          <span class="lbl">Procesy</span> kreslenie základných geometrických tvarov, používanie nástrojov na kreslenie, otáčanie, preklápanie a zmena veľkosti oblasti, zmena veľkosti papiera, spustenie a zastavenie animácie, krokovanie a prepínanie medzi obrázkami animácie, kreslenie obrázkov animácie, zmena poradia, vloženie a odstránenie obrázka z animácie
+        </td>
+        <td>Žiak vytvorí a upraví rastrový obrázok pomocou nástrojov editora a zostaví jednoduchú animáciu ako postupnosť obrázkov, ktorú spustí, zastaví a odladí.</td>
+        <td>Výtvarná výchova – kompozícia, farba, tvar; Matematika – geometrické tvary, mriežka, súradnice.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">5</td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s textom</span></td>
+        <td>
+          <ul>
+            <li>používať konkrétne nástroje editora na tvorbu a úpravu textu,</li>
+            <li>voliť vhodný nástroj na prácu s textom,</li>
+            <li>používať nástroje na vyhľadanie a nahradenie textu,</li>
+            <li>posudzovať vplyv formátovacích nástrojov a skrytých znakov na výsledný text a operácie s textom,</li>
+            <li>skúmať nové nástroje v konkrétnom editore.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> schránka, odrážky a číslovanie, tabuľka
+          <span class="lbl">Vlastnosti a vzťahy</span> slovo ako skupina písmen, veta ako skupina slov, odsek ako skupina viet, medzery a oddeľovače, obrázok a text, formátovanie textu, písmo + typ, veľkosť, hrúbka a farba písma (t.j. zvýraznenia), zarovnanie odseku, obrázok ako súčasť textu, skryté značky ako súčasť textového dokumentu, vplyv skrytých znakov na štruktúru aj výsledný vzhľad textu, znaky ako písmená, číslice, špeciálne znaky a symboly, text a hypertext (napr. na internete, v encyklopédii)
+          <span class="lbl">Procesy</span> presúvanie, kopírovanie a vkladanie textu, vkladanie obrázkov zo súboru, kontrola pravopisu
+        </td>
+        <td>Žiak napíše a naformátuje textový dokument (písmo, zarovnanie, odrážky), vyhľadá a nahradí text a posúdi vplyv skrytých znakov na výsledný vzhľad.</td>
+        <td>Slovenský jazyk a literatúra – pravopis, členenie textu na odseky; Výtvarná výchova – vzťah obrázka a textu.</td>
+        <td>MEV, TPPZ</td>
+        <td>Metódy: výklad, práca s návodom/textom, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">5</td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s prezentáciami</span></td>
+        <td>
+          <ul>
+            <li>používať konkrétne nástroje editora na tvorbu a úpravu prezentácií,</li>
+            <li>skúmať nové nástroje v konkrétnom editore.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> snímka, prezentácia, rozmiestnenie, pozadie, prechod medzi snímkami
+          <span class="lbl">Vlastnosti a vzťahy</span> snímky a ich poradie – prezentácia
+          <span class="lbl">Procesy</span> vytváranie prezentácie, vloženie novej snímky, vloženie textu, vloženie obrázku, spustenie a zastavenie prezentácie
+        </td>
+        <td>Žiak vytvorí jednoduchú prezentáciu z viacerých snímok s textom a obrázkami, usporiada ich poradie a prezentáciu spustí.</td>
+        <td>Slovenský jazyk a literatúra – súvislý prejav, štruktúra výpovede; ktorýkoľvek predmet – spracovanie témy do prezentácie.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: demonštrácia, projektová metóda, praktické cvičenie na počítači. Formy: individuálna, práca vo dvojiciach, projektová.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca so súbormi a priečinkami</span></td>
+        <td>
+          <ul>
+            <li>ukladať produkt do súboru,</li>
+            <li>otvoriť rozpracovaný produkt zo súboru,</li>
+            <li>orientovať sa v konkrétnej štruktúre priečinkov,</li>
+            <li>použiť nástroj na manipuláciu so súbormi a priečinkami,</li>
+            <li>presúvať, mazať, premenúvať súbory.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> súbor, priečinok
+          <span class="lbl">Vlastnosti a vzťahy</span> v súbore je uložený nejaký obsah, rôzne typy súborov pre rôzne typy informácií (súbor s obrázkom, súbor s textom, súbor s tabuľkou), odpadkový kôš
+          <span class="lbl">Procesy</span> vytvorenie, ukladanie dokumentov
+        </td>
+        <td>Žiak uloží a znovu otvorí svoju prácu, orientuje sa v štruktúre priečinkov a súbory presúva, premenúva a maže.</td>
+        <td>Matematika – usporiadanie a triedenie; ostatné predmety – organizácia vlastných dokumentov.</td>
+        <td>OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca v operačnom systéme</span></td>
+        <td>
+          <ul>
+            <li>použiť rôzny aplikačný softvér, ktorý je primeraný veku.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> schránka ako miesto na krátkodobé uchovávanie alebo prenášanie údajov
+          <span class="lbl">Procesy</span> používanie školského vzdelávacieho softvéru, práca s digitálnou učebnicou a encyklopédiou
+        </td>
+        <td>Žiak si vyberie a použije primeraný aplikačný softvér a využije schránku na prenos údajov medzi aplikáciami.</td>
+        <td>Ktorýkoľvek predmet – používanie digitálnej učebnice a vzdelávacieho softvéru pri učení.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 6 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">počítač a prídavné zariadenia</span></td>
+        <td>
+          <ul>
+            <li>pracovať s pamäťovými zariadeniami – prenášať, ukladať, kopírovať informácie.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> programy spracovávajú údaje a pomáhajú nám riešiť problémy (program ako nástroj na kreslenie, písanie, počítanie, evidovanie údajov, ktorý vie pracovať iba s určitými typmi údajov, určitými typmi súborov), klávesnica, myš a obrazovka ako zariadenia na komunikáciu s počítačom, pamäťové zariadenia (napr. CD, HD, USB kľúč) ako médiá/zariadenia na prenos a uchovanie informácií
+        </td>
+        <td>Žiak vysvetlí, na čo slúžia programy a vstupno-výstupné zariadenia, a pomocou pamäťového zariadenia prenesie, uloží a skopíruje informácie.</td>
+        <td>Fyzika/Technika – princíp fungovania zariadení; Matematika – jednotky a množstvo údajov.</td>
+        <td>OSR, ENV</td>
+        <td>Metódy: motivačný rozhovor, demonštrácia, praktické cvičenie na počítači. Formy: frontálna, individuálna, skupinová.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 7 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">analýza problému</span></td>
+        <td>
+          <ul>
+            <li>uvažovať o obmedzeniach, ktoré súvisia s riešením úlohy,</li>
+            <li>identifikovať opakujúce sa vzory,</li>
+            <li>uvažovať o hraničných prípadoch (na úrovni cyklov),</li>
+            <li>rozhodnúť o pravdivosti/nepravdivosti tvrdenia (výroku),</li>
+            <li>vybrať prvky alebo možnosti podľa pravdivosti tvrdenia,</li>
+            <li>popísať vzťahy medzi informáciami vlastnými slovami,</li>
+            <li>uvádzať kontrapríklad, v ktorom niečo neplatí, nefunguje,</li>
+            <li>uvažovať o rôznych riešeniach.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> platí – neplatí, a/alebo/nie (neformálne)
+          <span class="lbl">Procesy</span> krokovanie sekvencie a opakovania, rozhodovanie o pravdivosti tvrdenia
+        </td>
+        <td>Žiak rozanalyzuje jednoduchý problém – rozpozná opakujúce sa vzory, posúdi pravdivosť tvrdenia a uvedie kontrapríklad – a navrhne rôzne riešenia.</td>
+        <td>Matematika – výroky, logické spojky, hľadanie zákonitostí; Slovenský jazyk – argumentácia vlastnými slovami.</td>
+        <td>OSR</td>
+        <td>Metódy: riešenie problémových úloh, heuristická metóda, riadený rozhovor/diskusia. Formy: frontálna, práca vo dvojiciach, skupinová.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou postupnosti príkazov (úvod v jazyku na zápis algoritmov)</span></td>
+        <td>
+          <ul>
+            <li>riešiť problém skladaním príkazov do postupnosti,</li>
+            <li>aplikovať pravidlá konštrukcie jazyka pre zostavenie postupnosti príkazov,</li>
+            <li>interpretovať postupnosť príkazov,</li>
+            <li>hľadať chybu v postupnosti príkazov a opraviť ju.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> príkaz, parameter príkazu, postupnosť príkazov
+          <span class="lbl">Vlastnosti a vzťahy</span> ako súvisia príkazy, poradie príkazov a výsledok, pravidlá jazyka pre zostavenie sekvencie príkazov
+          <span class="lbl">Procesy</span> zostavenie a upravenie príkazu/príkazov, vyhodnotenie postupnosti príkazov, úprava sekvencie príkazov (pridanie, odstránenie príkazu, zmena poradia príkazov)
+        </td>
+        <td>Žiak vyrieši úlohu zostavením príkazov do postupnosti, správne zvolí ich poradie a parametre, postupnosť interpretuje a nájde a opraví v nej chybu.</td>
+        <td>Matematika – postupnosť krokov, poradie operácií; Telesná výchova – postupnosť pohybov ako návod.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: riešenie problémových úloh, praktické cvičenie na počítači, heuristická metóda. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 9 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">interpretácia zápisu riešenia</span></td>
+        <td>
+          <ul>
+            <li>realizovať návod, postup, algoritmus riešenia úlohy – interpretovať ho, krokovať riešenie, simulovať činnosť vykonávateľa.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> jazyk – vykonanie programu
+          <span class="lbl">Procesy</span> krokovanie, čo sa deje v počítači v prípade chyby v programe
+        </td>
+        <td>Žiak podľa zápisu krokuje a odsimuluje činnosť vykonávateľa, sleduje, čo sa deje pri chybe, a určí výsledok postupu.</td>
+        <td>Matematika – sledovanie postupu a medzivýsledkov; Slovenský jazyk – čítanie s porozumením návodu.</td>
+        <td>OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, riadený rozhovor. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 10 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">bezpečnosť a riziká</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o rizikách na internete,</li>
+            <li>aplikovať pravidlá pre zabezpečenie údajov, aplikácií (aj e-mailu) proti neoprávnenému použitiu,</li>
+            <li>diskutovať o počítačovej kriminalite,</li>
+            <li>diskutovať o dôveryhodnosti informácií na webe.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> vírus ako škodlivý softvér, dôveryhodnosť získaných informácií, riziká na internete a sociálnych sieťach
+          <span class="lbl">Procesy</span> šírenie počítačových vírusov a spamov, bezpečné a etické správanie sa na internete, činnosť hekerov
+        </td>
+        <td>Žiak vymenuje riziká na internete a sociálnych sieťach, uplatní pravidlá na zabezpečenie svojich údajov a posúdi dôveryhodnosť informácií na webe.</td>
+        <td>Etická výchova – etické správanie a zodpovednosť; Občianska náuka – kriminalita, práva a povinnosti.</td>
+        <td>AIG, MEV, OŽZ, OSR</td>
+        <td>Metódy: riadený rozhovor/diskusia, brainstorming, hranie rolí, riešenie problémových úloh. Formy: frontálna, skupinová.</td>
+        <td class="hod">3</td>
+      </tr>
+
+    </tbody>
+    <tfoot><tr><td colspan="7">SPOLU – 5. ročník</td><td class="hod">33</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="teacher-note">
+    <h4>Poznámky pre učiteľa</h4>
+    <ul>
+      <li>Na začiatku roka krátko zopakujte prihlásenie, ukladanie a prácu so súbormi z 1. stupňa.</li>
+      <li>Pri „konkrétnych nástrojoch“ (grafika, text, prezentácie) nechajte deti nástroje <b>skúmať samostatne</b>; dôraz na zmysel činnosti, nie na jeden konkrétny program.</li>
+      <li>Prezentáciu prepojte s iným predmetom — žiak spracuje tému, ktorú práve preberá inde.</li>
+          <li><b>AI gramotnosť</b>: kriticky posudzovať výstupy AI (môžu byť nesprávne alebo skreslené), overovať dôveryhodnosť informácií, používať AI bezpečne a eticky.</li>
+    </ul>
+  </div>
+</section>
+<section class="grade" id="rocnik-6">
+  <div class="grade-head">
+    <h2>6. ročník</h2>
+    <div class="grade-meta"><b>Hodinová dotácia:</b> 1 h/týždeň = 33 h/rok &nbsp;·&nbsp; <b>Stupeň:</b> 2. stupeň ZŠ &nbsp;·&nbsp; <b>Oblasť:</b> Matematika a práca s informáciami</div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup>
+      <col class="c-celok"><col class="c-vykon"><col class="c-obsah"><col class="c-vystup">
+      <col class="c-medzi"><col class="c-prierez"><col class="c-metody"><col class="c-hod">
+    </colgroup>
+    <thead><tr>
+      <th>Tematický celok</th><th>Výkonový štandard</th><th>Obsahový štandard</th>
+      <th>Výkon na konci celku</th><th>Medzipredmetové vzťahy</th><th>Prierezové témy</th>
+      <th>Metódy a formy</th><th>Hod.</th>
+    </tr></thead>
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s tabuľkami</span></td>
+        <td>
+          <ul>
+            <li>používať konkrétne nástroje na prácu s tabuľkami.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> tabuľka, riadok, stĺpec, bunka, adresa bunky
+          <span class="lbl">Vlastnosti a vzťahy</span> adresa bunky ako pozícia bunky v tabuľke, vlastnosti bunky ako zarovnanie, farba, veľkosť, okraje bunky
+          <span class="lbl">Procesy</span> pohyb (navigácia) v tabuľke (šípkami, klikaním), vpisovanie údajov, ich upravovanie a zvýrazňovanie
+        </td>
+        <td>Žiak vytvorí a upraví jednoduchú tabuľku, pohybuje sa v nej, vpisuje a zvýrazňuje údaje a určí adresu bunky.</td>
+        <td>Matematika – riadky, stĺpce, usporiadanie údajov; Slovenský jazyk – prehľadné usporiadanie informácií.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, práca s návodom. Formy: frontálna, individuálna.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">informácie</span></td>
+        <td>
+          <ul>
+            <li>kódovať informáciu podľa pokynov do konkrétnej reprezentácie,</li>
+            <li>dekódovať informáciu z jednoduchých reprezentácií,</li>
+            <li>vyhľadávať a získavať informácie v informačnom systéme a databáze (knižnica, elektronický obchod, rezervácie lístkov...),</li>
+            <li>získavať informácie rôznych typov pomocou konkrétnych nástrojov (napr. zoskenovaním, odfotením, nahraním zvuku, videa, ...),</li>
+            <li>vyberať vhodné nástroje na spracovanie informácií (na vyhľadávanie a získavanie, spracovanie informácií a komunikovanie pomocou nástrojov).</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> vzťahy medzi jednotlivými typmi informácie (grafika, text, čísla, zvuk)
+        </td>
+        <td>Žiak zakóduje a dekóduje informáciu do zvolenej reprezentácie a vyhľadá potrebné údaje v informačnom systéme či databáze pomocou vhodného nástroja.</td>
+        <td>Matematika – kódovanie a čísla; Slovenský jazyk – text ako nositeľ informácie; Hudobná/Výtvarná výchova – zvuk a obraz ako typy informácie.</td>
+        <td>AIG, MEV, TPPZ</td>
+        <td>Metódy: výklad, riešenie problémových úloh, praktické cvičenie na počítači. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">štruktúry</span></td>
+        <td>
+          <ul>
+            <li>orientovať sa v jednoduchej štruktúre – vyhľadávať a získať informácie zo štruktúry podľa zadaných kritérií,</li>
+            <li>organizovať informácie do štruktúr – vytvárať a manipulovať so štruktúrami, ktoré obsahujú údaje a jednoduché vzťahy (tabuľky, grafy, postupnosti obrázkov, čísel, ...),</li>
+            <li>interpretovať údaje zo štruktúr – vyvodiť existujúce vzťahy zo zadaných údajov v štruktúre, prerozprávať informácie uložené v štruktúre vlastnými slovami.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> postupnosť, tabuľka (v zmysle frekvenčná, kódovacia, slovník, mriežka), riadok, stĺpec
+          <span class="lbl">Vlastnosti a vzťahy</span> poradie objektov a ich pozícia v postupnosti, význam postupnosti, pozícia objektov v tabuľke, predchodca, nasledovník, sused, význam tabuľky
+          <span class="lbl">Procesy</span> práca s grafovými štruktúrami (s mapou, labyrintom, sieťou), práca so stromovými štruktúrami (strom rozhodnutí, stratégií, turnajov, rodokmeň), zapisovanie a vyhľadávanie v jednoduchej štruktúre, zostavovanie štruktúry
+        </td>
+        <td>Žiak usporiada údaje do štruktúry (tabuľka, postupnosť, strom, graf), vyhľadá v nej informácie podľa kritérií a vyvodené vzťahy prerozpráva vlastnými slovami.</td>
+        <td>Matematika – postupnosti, grafy, stromové štruktúry; Biológia – rodokmeň, triedenie; Geografia – mapa a orientácia v sieti.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: riešenie problémových úloh, heuristická metóda, praktické cvičenie na počítači. Formy: skupinová, individuálna.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">práca s webovou stránkou</span></td>
+        <td>
+          <ul>
+            <li>získavať informácie z webových stránok a použiť ich vo svojich produktoch (rešpektuje autorské práva),</li>
+            <li>posúdiť účel webovej stránky.</li>
+          </ul>
+        </td>
+        <td>
+          <em style="color:#5b6470;font-size:11.5px">ŠVP pri tomto celku neuvádza samostatný obsahový štandard.</em>
+        </td>
+        <td>Žiak získa z webovej stránky potrebné informácie, použije ich vo svojom produkte s rešpektom k autorským právam a posúdi, na aký účel stránka slúži.</td>
+        <td>Slovenský jazyk – práca s textom a zdrojom; Občianska náuka – autorské práva, dôveryhodnosť zdroja.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: riadený rozhovor, práca s textom, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">vyhľadávanie na webe</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o výsledkoch vyhľadávania (či spĺňajú naše očakávania),</li>
+            <li>posúdiť správnosť vyhľadaných informácií (výstup vyhľadávania),</li>
+            <li>vyhľadávať a získať textovú a grafickú informáciu podľa zadanej frázy na webe,</li>
+            <li>získať z konkrétneho zdroja požadované výstupy, prostredníctvom presne zadaných inštrukcií,</li>
+            <li>vyhľadávať rôzne typy informácií na webe.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> vyhľadávač
+          <span class="lbl">Procesy</span> vyhľadávanie textov, stránok, obrázkov, videa, vyhľadávanie v mapách na internete
+        </td>
+        <td>Žiak pomocou vyhľadávača nájde na webe rôzne typy informácií podľa zadanej frázy a posúdi správnosť a vhodnosť výsledkov.</td>
+        <td>Slovenský jazyk – formulácia otázky, kľúčové slová; Geografia – vyhľadávanie v mapách; ktorýkoľvek predmet – získavanie podkladov.</td>
+        <td>AIG, MEV, TPPZ</td>
+        <td>Metódy: riadený rozhovor/diskusia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 6 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">práca s nástrojmi na komunikáciu</span></td>
+        <td>
+          <ul>
+            <li>zostaviť a posielať správu danému príjemcovi prostredníctvom konkrétneho e-mailového nástroja,</li>
+            <li>hľadať a zobraziť prijatú správu od konkrétneho odosielateľa prostredníctvom konkrétneho e-mailového nástroja,</li>
+            <li>pripojiť prílohu správy, zobraziť prijatú prílohu prostredníctvom konkrétneho e-mailového nástroja,</li>
+            <li>zhodnotiť správnosť e-mailovej adresy.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> príloha, adresár
+          <span class="lbl">Procesy</span> dodržiavanie netikety, preposlanie e-mailu, priloženie prílohy, odoslanie e-mailu viacerým adresátom naraz
+        </td>
+        <td>Žiak napíše a odošle e-mail viacerým adresátom, pripojí a zobrazí prílohu, dodržiava netiketu a overí správnosť e-mailovej adresy.</td>
+        <td>Slovenský jazyk – stavba a štýl správy; Etická výchova – netiketa, slušná komunikácia.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, hranie rolí. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 7 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">jazyk na zápis riešenia</span></td>
+        <td>
+          <ul>
+            <li>použiť jazyk na popis riešenia problému – aplikovať pravidlá, konštrukcie jazyka.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> chybný zápis, konštrukcie jazyka ako postupnosti príkazov
+          <span class="lbl">Procesy</span> zostavovanie programu v jazyku na zápis algoritmov, spustenie programu
+        </td>
+        <td>Žiak zapíše riešenie problému v jazyku na zápis algoritmov podľa jeho pravidiel a konštrukcií a program spustí.</td>
+        <td>Matematika – presný zápis postupu, pravidlá a symbolika; Slovenský jazyk – jazyk ako systém pravidiel.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou cyklov (úvod: pevný počet opakovaní)</span></td>
+        <td>
+          <ul>
+            <li>rozpoznať opakujúce sa vzory pri riešení zadaného problému,</li>
+            <li>rozpoznať, aká časť algoritmu sa má vykonať pred, počas a po skončení cyklu,</li>
+            <li>stanoviť počet opakovaní pomocou hodnoty,</li>
+            <li>riešiť problémy, ktoré vyžadujú známy počet opakovaní,</li>
+            <li>zapísať riešenie problému s cyklom pomocou jazyka,</li>
+            <li>interpretovať algoritmy s cyklami.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> opakovanie, počet opakovaní, telo cyklu
+          <span class="lbl">Vlastnosti a vzťahy</span> ako súvisí počet opakovaní s výsledkom
+          <span class="lbl">Procesy</span> zostavovanie, upravovanie tela cyklu, nastavenie počtu opakovaní
+        </td>
+        <td>Žiak sa prvýkrát zoznámi s cyklom: rozpozná opakujúci sa vzor, zostaví algoritmus s pevným počtom opakovaní a interpretuje jeho vykonávanie.</td>
+        <td>Matematika – pravidelnosť, násobenie ako opakované sčítanie; Výtvarná výchova – opakujúce sa vzory a ornamenty.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: riešenie problémových úloh, heuristická metóda, praktické cvičenie na počítači. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 9 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">hľadanie, opravovanie chýb</span></td>
+        <td>
+          <ul>
+            <li>rozpoznať, že program pracuje nesprávne,</li>
+            <li>hľadať chybu vo vlastnom nesprávne pracujúcom programe a opraviť ju,</li>
+            <li>interpretovať návod, v ktorom je chyba,</li>
+            <li>diskutovať a argumentovať o správnosti riešenia (svojho aj cudzieho),</li>
+            <li>diskutovať o rôznych postupoch a výstupoch riešenia (porovnať riešenia konkrétneho problému od rôznych žiakov z hľadiska dĺžky výsledku, trvania, veľkosti kódu/zápisu),</li>
+            <li>doplniť, dokončiť, modifikovať rozpracované riešenie,</li>
+            <li>navrhnúť vylepšenie riešenia.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> chyba v postupnosti príkazov (zlý príkaz, chýbajúci príkaz, vymenený príkaz alebo príkaz navyše), riešenie, ktoré lepšie spĺňa stanovené kritérium v zadanom probléme
+          <span class="lbl">Procesy</span> hľadanie chyby
+        </td>
+        <td>Žiak zistí, že program pracuje nesprávne, nájde a opraví v ňom chybu a argumentuje o správnosti a kvalite rôznych riešení.</td>
+        <td>Matematika – kontrola postupu a výsledku; Slovenský jazyk – argumentácia a porovnávanie riešení.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: riešenie problémových úloh, riadený rozhovor/diskusia, praktické cvičenie na počítači. Formy: skupinová, individuálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 10 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca v počítačovej sieti a na internete</span></td>
+        <td>
+          <ul>
+            <li>orientovať sa v konkrétnych miestach v sieti,</li>
+            <li>použiť nástroje na zdieľanie (kopírovanie, prenášanie) súborov v rámci počítačovej siete,</li>
+            <li>rozlíšiť súbory, ktoré sú uložené na sieti a súbory vo vlastnom počítači,</li>
+            <li>ukladať súbory do svojho počítača z internetu, zo sieťového disku,</li>
+            <li>nahrávať súbory na sieťový disk,</li>
+            <li>rozlíšiť e-mailovú a webovú adresu.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> sieť
+          <span class="lbl">Vlastnosti a vzťahy</span> lokálne súbory vo vlastnom počítači a súbory na sieťovom disku, cesta (adresa) ako zápis, ktorý identifikuje počítač, počítačová sieť ako prepojenie počítačov a zariadení, internet ako celosvetová počítačová sieť
+          <span class="lbl">Procesy</span> sťahovanie a posielanie súborov
+        </td>
+        <td>Žiak sa orientuje v počítačovej sieti, rozlíši lokálne a sieťové súbory, stiahne a nahrá súbory a rozlíši e-mailovú a webovú adresu.</td>
+        <td>Fyzika – prenos údajov, prepojenie zariadení; Geografia – internet ako celosvetová sieť.</td>
+        <td>MEV, TPPZ</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 11 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca proti vírusom a špehovaniu</span></td>
+        <td>
+          <ul>
+            <li>akceptovať, že nemajú sťahovať a spúšťať neznáme, pochybné aplikácie.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> vírus ako škodlivý softvér, špehovanie ako nepovolená aktivita softvéru alebo webových stránok
+        </td>
+        <td>Žiak vysvetlí riziko škodlivého softvéru a špehovania a nesťahuje ani nespúšťa neznáme, pochybné aplikácie.</td>
+        <td>Občianska náuka – bezpečné a zodpovedné správanie; Etická výchova – dôvera a riziko.</td>
+        <td>OŽZ, MEV</td>
+        <td>Metódy: motivačný rozhovor, riadený rozhovor/diskusia, demonštrácia. Formy: frontálna, individuálna.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 12 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">digitálne technológie v spoločnosti</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o využití konkrétnych nástrojov digitálnych technológií pri učení sa iných predmetov,</li>
+            <li>diskutovať taktiež o tom, ako pomáhajú učiteľovi – ako pomáhajú žiakovi.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> spoločnosť a sociálne siete, digitálne technológie okolo nás, digitálne technológie ako nástroje pre výpočet, komunikáciu, navigáciu, doma, v škole, v práci rodičov, v obchode, digitálne technológie a hry, film, hudba
+          <span class="lbl">Procesy</span> používanie nástrojov na vlastné učenie sa, zábavu a spoznávanie
+        </td>
+        <td>Žiak uvedie príklady využitia digitálnych technológií v spoločnosti a pri učení a diskutuje o ich prínose pre učiteľa i žiaka.</td>
+        <td>Občianska náuka – technológie v spoločnosti; ktorýkoľvek predmet – digitálne nástroje pri učení.</td>
+        <td>AIG, MEV, MUV</td>
+        <td>Metódy: riadený rozhovor/diskusia, brainstorming, projektová metóda. Formy: frontálna, skupinová.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 13 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">legálnosť používania softvéru</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o princípoch dodržiavania základných autorských práv.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> autorské právo a jeho vzťah k autorovi, dielu a použitiu, legálnosť a nelegálnosť používania softvéru a informácií (texty, obrázky, hudba, filmy, ...)
+        </td>
+        <td>Žiak vysvetlí princíp autorského práva a rozlíši legálne a nelegálne používanie softvéru a informácií.</td>
+        <td>Občianska náuka – právo a autorstvo; Etická výchova – čestnosť a rešpekt k práci iných.</td>
+        <td>AIG, MEV, FG</td>
+        <td>Metódy: riadený rozhovor/diskusia, práca s textom, riešenie problémových úloh. Formy: frontálna, individuálna.</td>
+        <td class="hod">1</td>
+      </tr>
+
+    </tbody>
+    <tfoot><tr><td colspan="7">SPOLU – 6. ročník</td><td class="hod">33</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="teacher-note">
+    <h4>Poznámky pre učiteľa</h4>
+    <ul>
+      <li>Tabuľky a jednoduché štruktúry viažte na <b>reálne dáta</b> (rozvrh, výsledky, jednoduchý rozpočet).</li>
+      <li>Prvé algoritmy s cyklom začnite malým pevným počtom opakovaní, vizuálne v blokovom prostredí (napr. Scratch alebo Blockly, korytnačka).</li>
+      <li>Bezpečnosť a autorské práva preberajte cez diskusiu a príklady z ich vlastného online sveta.</li>
+          <li><b>AI gramotnosť</b>: AI v spoločnosti a jej vplyv, riziká (deepfake, súkromie), etika a autorské práva pri obsahu generovanom AI.</li>
+    </ul>
+  </div>
+</section>
+<section class="grade" id="rocnik-7">
+  <div class="grade-head">
+    <h2>7. ročník</h2>
+    <div class="grade-meta"><b>Hodinová dotácia:</b> 1 h/týždeň = 33 h/rok &nbsp;·&nbsp; <b>Stupeň:</b> 2. stupeň ZŠ &nbsp;·&nbsp; <b>Oblasť:</b> Matematika a práca s informáciami</div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup>
+      <col class="c-celok"><col class="c-vykon"><col class="c-obsah"><col class="c-vystup">
+      <col class="c-medzi"><col class="c-prierez"><col class="c-metody"><col class="c-hod">
+    </colgroup>
+    <thead><tr>
+      <th>Tematický celok</th><th>Výkonový štandard</th><th>Obsahový štandard</th>
+      <th>Výkon na konci celku</th><th>Medzipredmetové vzťahy</th><th>Prierezové témy</th>
+      <th>Metódy a formy</th><th>Hod.</th>
+    </tr></thead>
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s grafikou (obrázok v rastri, formáty súborov)</span></td>
+        <td>
+          <ul>
+            <li>digitalizovať grafickú informáciu,</li>
+            <li>zvoliť vhodný formát súboru pre uloženie obrázkov rôznych typov,</li>
+            <li>zakódovať a rozkódovať podľa pokynov rastrový obrázok,</li>
+            <li>navrhnúť postupnosť daných grafických operácií pre dosiahnutie stanoveného výsledku.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> obrázok v rastri, formáty súborov a ich vzťah k uloženému obrázku
+          <span class="lbl">Procesy</span> kreslenie ako postupnosť príkazov pre vykonávateľa
+        </td>
+        <td>Žiak digitalizuje a upraví rastrový obrázok, zvolí vhodný formát na jeho uloženie a navrhne postupnosť grafických operácií na dosiahnutie zadaného výsledku.</td>
+        <td>Výtvarná výchova – kompozícia, farba, digitálna tvorba; Matematika – súradnice bodu, mriežka rastra.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s textom (pokročilé formátovanie, tabuľky v texte)</span></td>
+        <td>
+          <ul>
+            <li>zvoliť vhodný nástroj na prácu s textom,</li>
+            <li>použiť nástroje na vyhľadanie a nahradenie textu,</li>
+            <li>rozlíšiť neformátovaný a formátovaný text,</li>
+            <li>posúdiť vlastnosti textovej informácie podľa stanovených kritérií.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> odrážky a číslovanie, tabuľka
+          <span class="lbl">Vlastnosti a vzťahy</span> skryté značky ako súčasť textového dokumentu, obrázok ako súčasť textu, vplyv skrytých znakov na štruktúru aj výsledný vzhľad textu, znaky ako písmená, číslice, špeciálne znaky a symboly, neformátovaný a formátovaný text (t.j., obsahuje aj informácie o zvýrazneniach, písme, odsekoch, zarovnaniach)
+          <span class="lbl">Procesy</span> vkladanie tabuľky
+        </td>
+        <td>Žiak vytvorí formátovaný textový dokument s odrážkami, číslovaním a vloženou tabuľkou, použije vyhľadanie a nahradenie textu a posúdi kvalitu textovej informácie.</td>
+        <td>Slovenský jazyk a literatúra – štruktúra a úprava textu, pravopis; Matematika – usporiadanie údajov v tabuľke.</td>
+        <td>MEV, TPPZ</td>
+        <td>Metódy: výklad, demonštrácia, práca s návodom, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s prezentáciami</span></td>
+        <td>
+          <ul>
+            <li>používať nástroje editora na tvorbu a úpravu prezentácií.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Procesy</span> manipulácia s poradím snímok, vloženie prepojenia
+        </td>
+        <td>Žiak vytvorí a upraví prezentáciu, usporiada poradie snímok a vloží do nej prepojenie.</td>
+        <td>Slovenský jazyk a literatúra – súvislý prejav, štruktúra témy; ľubovoľný predmet – spracovanie témy do prezentácie.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: demonštrácia, projektová metóda, praktické cvičenie na počítači. Formy: individuálna, práca vo dvojiciach, projektová.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s multimédiami (video, strih)</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje editora na skombinovanie videa, zvuku a textu,</li>
+            <li>rozhodnúť sa pre správne zariadenie pre zaznamenanie zvuku a obrazu,</li>
+            <li>skúmať nové nástroje v konkrétnom editore.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> klip, efekt, prechod, strihanie, časová os
+          <span class="lbl">Vlastnosti a vzťahy</span> video ako postupnosť klipov, efektov, prechodov, klip ako zvuk, obrázok, titulok, vzťah medzi rozložením prvkov na časovej osi a výsledkom
+          <span class="lbl">Procesy</span> vytvorenie a uloženie záznamu, orezanie, vystrihnutie, umiestnenie klipu
+        </td>
+        <td>Žiak zostaví na časovej osi krátke video z klipov, zvuku a textu, orezáva a strihá klipy a hotový záznam uloží.</td>
+        <td>Hudobná výchova – zvuk, hudobný podklad; Výtvarná výchova – obraz, titulok, kompozícia záberu.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, projektová metóda, heuristická metóda. Formy: práca vo dvojiciach, skupinová, projektová.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">práca s tabuľkami (vzorce, funkcie)</span></td>
+        <td>
+          <ul>
+            <li>použiť konkrétne nástroje na prácu s tabuľkami,</li>
+            <li>zvoliť a používať funkcie pre jednoduché výpočty,</li>
+            <li>skúmať nové nástroje v konkrétnom editore.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> tabuľka, riadok, stĺpec, bunka, adresa bunky
+          <span class="lbl">Vlastnosti a vzťahy</span> adresa bunky ako pozícia bunky v tabuľke, bunky a typy údajov (číslo, text), vlastnosti bunky ako zarovnanie, farba, veľkosť, okraje bunky, bunky so vzorcami
+          <span class="lbl">Procesy</span> pohyb (navigácia) v tabuľke (šípkami, klikaním), vpisovanie údajov, ich upravovanie a zvýrazňovanie, jednoduché výpočty s operáciami sčítania, odčítania, násobenia a delenia, vloženie jednoduchej funkcie
+        </td>
+        <td>Žiak zapíše údaje do tabuľkového editora, adresuje bunky a pomocou vzorcov a jednoduchej funkcie vykoná základné výpočty.</td>
+        <td>Matematika – operácie sčítania, odčítania, násobenia, delenia, výpočty; Finančná gramotnosť – jednoduchý rozpočet v tabuľke.</td>
+        <td>FG, TPPZ</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: frontálna, individuálna.</td>
+        <td class="hod">5</td>
+      </tr>
+
+      <!-- 6 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">analýza problému</span></td>
+        <td>
+          <ul>
+            <li>identifikovať opakujúce sa vzory,</li>
+            <li>rozpoznávať miesta, kde sa treba rozhodovať,</li>
+            <li>vlastnými slovami sformulovať plán riešenia,</li>
+            <li>rozhodnúť sa o pravdivosti/nepravdivosti tvrdenia/výroku,</li>
+            <li>uviesť kontrapríklad, keď niečo neplatí, nefunguje,</li>
+            <li>uvažovať o rôznych riešeniach.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> aký informatický problém je v zadaní úlohy, platí – neplatí, a/alebo/nie (neformálne)
+          <span class="lbl">Procesy</span> idea sekvencie, opakovania, vetvenia, manipulovania s údajmi, rozhodovanie o pravdivosti tvrdenia
+        </td>
+        <td>Žiak rozoberie zadanie úlohy, nájde v ňom opakujúce sa vzory a miesta na rozhodovanie a vlastnými slovami sformuluje plán riešenia.</td>
+        <td>Matematika – logika, pravdivosť výroku, rozklad úlohy; Slovenský jazyk – presná formulácia postupu.</td>
+        <td>OSR</td>
+        <td>Metódy: riadený rozhovor, heuristická metóda, riešenie problémových úloh, brainstorming. Formy: frontálna, práca vo dvojiciach, skupinová.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 7 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">jazyk na zápis riešenia</span></td>
+        <td>
+          <ul>
+            <li>použiť jazyk na popis riešenia problému – aplikovať pravidlá, konštrukcie jazyka,</li>
+            <li>použiť matematické výrazy v jazyku na zápis algoritmov.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> algoritmus – programovací jazyk, vstup – algoritmus – výsledok, chybný zápis, konštrukcie jazyka ako: postupnosť príkazov, cyklus s pevným počtom opakovaní, podmienený príkaz, pomenovaná postupnosť príkazov
+          <span class="lbl">Procesy</span> zostavovanie programu v jazyku na zápis algoritmov, spustenie programu
+        </td>
+        <td>Žiak zapíše riešenie jednoduchého problému v jazyku na zápis algoritmov s použitím konštrukcií jazyka a matematických výrazov a program spustí.</td>
+        <td>Matematika – matematické výrazy, premenné vo výpočte; Slovenský jazyk – pravidlá zápisu (syntax) a presnosť jazyka.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači, heuristická metóda. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou postupnosti príkazov (upevnenie: parametre a dlhšie sekvencie)</span></td>
+        <td>
+          <ul>
+            <li>vyriešiť problém skladaním príkazov do postupnosti,</li>
+            <li>aplikovať pravidlá, konštrukcie jazyka pre zostavenie postupnosti príkazov,</li>
+            <li>interpretovať postupnosť príkazov,</li>
+            <li>vyhľadať chybu v postupnosti príkazov a opraviť ju.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> parameter príkazu, postupnosť príkazov
+          <span class="lbl">Vlastnosti a vzťahy</span> ako súvisí príkaz, poradie príkazov a výsledok, pravidlá jazyka pre zostavenie sekvencie príkazov
+          <span class="lbl">Procesy</span> zostavenie a úprava príkazov, vyhodnotenie postupnosti príkazov, úprava sekvencie príkazov (pridanie, odstránenie príkazu, zmena poradia príkazov)
+        </td>
+        <td>Žiak upevní zostavovanie postupnosti príkazov s parametrami: vyrieši zložitejší problém, vyhodnotí postupnosť a nájde a opraví v nej chybu.</td>
+        <td>Matematika – postupnosť krokov, poradie operácií; Telesná a športová výchova – postupnosť pohybov ako sekvencia.</td>
+        <td>OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 9 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou cyklov (upevnenie: cyklus v zložitejších úlohách)</span></td>
+        <td>
+          <ul>
+            <li>rozpoznať opakujúce sa vzory pri riešení zadaného problému,</li>
+            <li>rozpoznať, aká časť algoritmu sa má vykonať pred, počas a po skončení cyklu,</li>
+            <li>stanoviť počet opakovaní pomocou hodnoty,</li>
+            <li>riešiť problémy, ktoré vyžadujú známy počet opakovaní,</li>
+            <li>zapísať riešenie problému s cyklom pomocou jazyka,</li>
+            <li>interpretovať algoritmy s cyklami.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> opakovanie, počet opakovaní, telo cyklu
+          <span class="lbl">Vlastnosti a vzťahy</span> ako súvisí počet opakovaní s výsledkom
+          <span class="lbl">Procesy</span> zostavovanie, upravovanie tela cyklu, nastavenie počtu opakovaní
+        </td>
+        <td>Žiak upevní prácu s cyklom: v zložitejších úlohách nahradí opakujúce sa vzory cyklom, nastaví telo cyklu a počet opakovaní a interpretuje algoritmus s cyklom.</td>
+        <td>Matematika – násobenie ako opakované sčítanie, pravidelnosti a vzory; Výtvarná výchova – opakujúci sa vzor, ornament.</td>
+        <td>OSR</td>
+        <td>Metódy: heuristická metóda, praktické cvičenie na počítači, riešenie problémových úloh. Formy: individuálna, práca vo dvojiciach, skupinová.</td>
+        <td class="hod">4</td>
+      </tr>
+
+      <!-- 10 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">interpretácia zápisu riešenia</span></td>
+        <td>
+          <ul>
+            <li>realizovať návod, postup, algoritmus riešenia úlohy – interpretovať ho, krokovať riešenie, simulovať činnosť vykonávateľa,</li>
+            <li>vyjadriť princíp fungovania návodu – objaviť a popísať vlastnými slovami princíp fungovania jednoduchého algoritmu,</li>
+            <li>vyhľadať vzťah medzi vstupom, algoritmom a výsledkom.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> jazyk – vykonanie programu
+          <span class="lbl">Procesy</span> krokovanie, čo sa deje v počítači v prípade chyby v programe
+        </td>
+        <td>Žiak odkrokuje cudzí algoritmus, simuluje činnosť vykonávateľa, vlastnými slovami vysvetlí princíp jeho fungovania a určí vzťah medzi vstupom, algoritmom a výsledkom.</td>
+        <td>Matematika – čítanie a interpretácia postupu; Slovenský jazyk – prerozprávanie postupu vlastnými slovami.</td>
+        <td>OSR, MEV</td>
+        <td>Metódy: riadený rozhovor, demonštrácia, praktické cvičenie na počítači. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">2</td>
+      </tr>
+
+    </tbody>
+    <tfoot><tr><td colspan="7">SPOLU – 7. ročník</td><td class="hod">33</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="teacher-note">
+    <h4>Poznámky pre učiteľa</h4>
+    <ul>
+      <li>Programujte v <b>blokovom alebo jednoduchom textovom prostredí</b> (Scratch, Blockly, prípadne úvod do Pythonu); dôraz na pochopenie, nie na presnú syntax.</li>
+      <li>Tabuľky so vzorcami spojte s Matematikou a finančnou gramotnosťou (jednoduchý rozpočet).</li>
+      <li>Pri videu a multimédiách rátajte s časom na spracovanie — obmedzte rozsah projektu, aby sa stihol.</li>
+          <li><b>AI gramotnosť</b>: generatívnu AI používať ako pomocníka pri učení pod vedením učiteľa (formulovať jednoduché zadania), zodpovednosť za vlastnú prácu ostáva žiakovi; súvis vzorov a dát s princípom fungovania AI.</li>
+    </ul>
+  </div>
+</section>
+<section class="grade" id="rocnik-8">
+  <div class="grade-head">
+    <h2>8. ročník</h2>
+    <div class="grade-meta"><b>Hodinová dotácia:</b> 1 h/týždeň = 33 h/rok &nbsp;·&nbsp; <b>Stupeň:</b> 2. stupeň ZŠ &nbsp;·&nbsp; <b>Oblasť:</b> Matematika a práca s informáciami</div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup>
+      <col class="c-celok"><col class="c-vykon"><col class="c-obsah"><col class="c-vystup">
+      <col class="c-medzi"><col class="c-prierez"><col class="c-metody"><col class="c-hod">
+    </colgroup>
+    <thead><tr>
+      <th>Tematický celok</th><th>Výkonový štandard</th><th>Obsahový štandard</th>
+      <th>Výkon na konci celku</th><th>Medzipredmetové vzťahy</th><th>Prierezové témy</th>
+      <th>Metódy a formy</th><th>Hod.</th>
+    </tr></thead>
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">informácie</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o vlastnostiach jednoduchej informácie rôzneho typu,</li>
+            <li>voliť vhodnú reprezentáciu reálnej informácie,</li>
+            <li>zakódovať informáciu podľa pokynov do konkrétnej reprezentácie,</li>
+            <li>dekódovať informáciu z jednoduchých reprezentácií,</li>
+            <li>posúdiť kvalitu informácie rôzneho typu na jednoduchej úrovni,</li>
+            <li>posúdiť vlastnosti súborov rôznych typov (rôzne typy textov, rôzna grafika, zvuk, video),</li>
+            <li>vyhľadať a získať informácie v informačnom systéme a databáze (knižnica, el. obchod, rezervácie lístkov...),</li>
+            <li>získať informácie rôznych typov pomocou konkrétnych nástrojov (napr. zoskenovaním, odfotením, nahraním zvuku, videa, ...),</li>
+            <li>rozhodnúť sa pre nástroje na spracovanie informácií (na vyhľadávanie a získavanie, spracovanie informácií a komunikovanie pomocou nástrojov),</li>
+            <li>vyhľadať informácie (v texte, v encyklopédii, v slovníku, v tabuľke, ...).</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span>
+          vzťahy medzi jednotlivými typmi informácie (grafika, text, čísla, zvuk), text a hypertext (napr. na internete, v encyklopédii), možnosť vyhľadávať reťazce (napr. dá sa v texte, a nie v grafike)
+        </td>
+        <td>Žiak zvolí vhodnú reprezentáciu informácie, zakóduje a dekóduje ju, posúdi jej kvalitu a vyhľadá potrebné informácie v databáze či informačnom systéme.</td>
+        <td>Slovenský jazyk a literatúra – práca s textom a encyklopédiou; Matematika – čísla ako reprezentácia; Fyzika – zaznamenávanie a spracovanie údajov.</td>
+        <td>AIG, MEV, TPPZ</td>
+        <td>Metódy: výklad, demonštrácia, praktické cvičenie na počítači, riešenie problémových úloh. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td><span class="okruh">Reprezentácie a nástroje</span><span class="celok">štruktúry</span></td>
+        <td>
+          <ul>
+            <li>orientovať sa v jednoduchej štruktúre – vyhľadávať a získať informácie zo štruktúry podľa zadaných kritérií,</li>
+            <li>organizovať informácie do štruktúr – vytvárať a manipulovať so štruktúrami, ktoré obsahujú údaje a jednoduché vzťahy (tabuľky, grafy, postupnosti obrázkov, čísel,...),</li>
+            <li>interpretovať údaje zo štruktúr – vyvodiť existujúce vzťahy zo zadaných údajov v štruktúre, prerozprávať informácie uložené v štruktúre vlastnými slovami.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> postupnosť, tabuľka (v zmysle frekvenčná, kódovacia, slovník, mriežka)
+          <span class="lbl">Procesy</span> práca s grafovými štruktúrami (s mapou, labyrintom, sieťou), práca so stromovými štruktúrami (strom rozhodnutí, stratégií, turnajov, rodokmeň), zapisovanie a vyhľadávanie v jednoduchej štruktúre, zostavovanie štruktúry
+        </td>
+        <td>Žiak organizuje údaje do stromových a grafových štruktúr, vyhľadá v nich informácie podľa kritérií a vyvodí zo zadaných údajov existujúce vzťahy.</td>
+        <td>Matematika – grafy, stromy, postupnosti; Biológia – rodokmeň, triedenie; Dejepis – časová a rodová štruktúra.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: riadený rozhovor, demonštrácia, riešenie problémových úloh, praktické cvičenie na počítači. Formy: frontálna, skupinová, individuálna.</td>
+        <td class="hod">3</td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">práca s webovou stránkou</span></td>
+        <td>
+          <ul>
+            <li>získať informácie z webových stránok a použiť ich vo svojich produktoch (rešpektovať autorské práva).</li>
+          </ul>
+        </td>
+        <td>
+          <em style="color:#5b6470;font-size:11.5px">ŠVP pri tomto celku neuvádza samostatný obsahový štandard.</em>
+        </td>
+        <td>Žiak získa informácie z webových stránok a použije ich vo vlastnom produkte pri rešpektovaní autorských práv.</td>
+        <td>Slovenský jazyk a literatúra – citovanie a spracovanie zdrojov; Občianska náuka – autorské práva.</td>
+        <td>MEV, TPPZ</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, riadený rozhovor, projektová metóda. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">vyhľadávanie na webe</span></td>
+        <td>
+          <ul>
+            <li>vyhľadať rôzne typy informácií na webe,</li>
+            <li>posúdiť správnosť a kvalitu vyhľadaných informácií (výstup vyhľadávania).</li>
+          </ul>
+        </td>
+        <td>
+          <em style="color:#5b6470;font-size:11.5px">ŠVP pri tomto celku neuvádza samostatný obsahový štandard.</em>
+        </td>
+        <td>Žiak cielene vyhľadá rôzne typy informácií na webe a kriticky posúdi správnosť a kvalitu výsledkov vyhľadávania.</td>
+        <td>Slovenský jazyk a literatúra – kritické čítanie zdrojov; Občianska náuka – mediálna gramotnosť.</td>
+        <td>AIG, MEV, OSR</td>
+        <td>Metódy: riešenie problémových úloh, riadený rozhovor/diskusia, praktické cvičenie na počítači. Formy: individuálna, frontálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td><span class="okruh">Komunikácia a spolupráca</span><span class="celok">práca s nástrojmi na komunikáciu (chat)</span></td>
+        <td>
+          <ul>
+            <li>komunikovať prostredníctvom konkrétneho nástroja i aplikácie na neinteraktívnu komunikáciu,</li>
+            <li>porovnať klady i zápory komunikácie prostredníctvom chatu a e-mailu.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> chat ako internetový rozhovor, je to iný typ komunikácie ako e-mail
+          <span class="lbl">Procesy</span> prijatie a odoslanie správy, výber adresáta, odoslanie viacerým adresátom naraz
+        </td>
+        <td>Žiak komunikuje pomocou konkrétneho nástroja (chat) a porovná klady a zápory chatu a e-mailu.</td>
+        <td>Slovenský jazyk a literatúra – jazyk a štýl komunikácie; Etická výchova – pravidlá slušnej komunikácie.</td>
+        <td>MEV, OSR</td>
+        <td>Metódy: motivačný rozhovor, demonštrácia, praktické cvičenie na počítači, diskusia. Formy: práca vo dvojiciach, frontálna.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 6 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou vetvenia</span></td>
+        <td>
+          <ul>
+            <li>rozpoznať situácie a podmienky, keď treba použiť vetvenie,</li>
+            <li>rozpoznať, aká časť algoritmu sa má vykonať pred, v rámci a po skončení vetvenia,</li>
+            <li>zostaviť a zapísať podmienku,</li>
+            <li>vyriešiť problémy, ktoré vyžadujú vetvenie s jednoduchou podmienkou (bez logických spojok),</li>
+            <li>zapísať riešenie problému s vetvením pomocou jazyka,</li>
+            <li>interpretovať algoritmy s vetvením.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> vetvenie, podmienka
+          <span class="lbl">Vlastnosti a vzťahy</span> konštrukcia vetvenia s jednoduchou podmienkou, pravda, nepravda – splnená a nesplnená podmienka
+          <span class="lbl">Procesy</span> zostavovanie, upravovanie vetvenia, vytvorenie podmienky, vyhodnotenie podmienky
+        </td>
+        <td>Žiak rozpozná, kde treba rozhodovanie, zostaví jednoduchú podmienku a zapíše i interpretuje algoritmus s vetvením.</td>
+        <td>Matematika – pravdivosť výrokov, porovnávanie hodnôt; Slovenský jazyk a literatúra – logická stavba postupu.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: výklad, demonštrácia, heuristická metóda, riešenie problémových úloh, praktické cvičenie na počítači. Formy: frontálna, individuálna, práca vo dvojiciach.</td>
+        <td class="hod">5</td>
+      </tr>
+
+      <!-- 7 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou premenných</span></td>
+        <td>
+          <ul>
+            <li>identifikovať údaje zo zadania úlohy, ktoré musia byť zapamätané, resp. sa menia, a vyžadujú si použitie premenných,</li>
+            <li>aplikovať pravidlá, konštrukcie jazyka pre nastavenie a použitie premennej,</li>
+            <li>vyriešiť problémy, v ktorých si treba zapamätať a neskôr použiť zapamätané hodnoty,</li>
+            <li>zovšeobecniť riešenie tak, aby fungovalo nielen s konštantami,</li>
+            <li>interpretovať algoritmy s výrazmi a premennými.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> premenná, meno (pomenovanie) premennej, hodnota premennej, operácia (+,–,*,/)
+          <span class="lbl">Vlastnosti a vzťahy</span> pravidlá jazyka pre použitie premennej, meno premennej – hodnota premennej
+          <span class="lbl">Procesy</span> nastavenie hodnoty (priradenie), zistenie hodnoty (použitie premennej), zmena hodnoty premennej, vyhodnocovanie výrazu s premennými, číslami a operáciami
+        </td>
+        <td>Žiak použije premennú na zapamätanie a zmenu hodnoty, zovšeobecní riešenie a interpretuje algoritmus s výrazmi a premennými.</td>
+        <td>Matematika – premenná, výraz, operácie; Fyzika – veličiny a ich hodnoty.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: výklad, demonštrácia, riešenie problémových úloh, heuristická metóda, praktické cvičenie na počítači. Formy: frontálna, individuálna, skupinová.</td>
+        <td class="hod">5</td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">pomocou nástrojov na interakciu</span></td>
+        <td>
+          <ul>
+            <li>rozpoznať situácie, keď treba čakať na vstup,</li>
+            <li>zapísať algoritmus, ktorý reaguje na vstup,</li>
+            <li>interpretovať zapísané riešenie,</li>
+            <li>vytvoriť hypotézu, ako neznámy algoritmus spracuje zadaný vstup.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> prostriedky jazyka pre: získanie vstupu, spracovanie vstupu a zobrazenie výstupu
+          <span class="lbl">Procesy</span> čakanie na neznámy vstup – vykonanie akcie – výstup, následný efekt
+        </td>
+        <td>Žiak zapíše algoritmus, ktorý čaká na vstup a reaguje naň, a vytvorí hypotézu, ako program spracuje zadaný vstup.</td>
+        <td>Matematika – vstup, spracovanie, výstup; Fyzika – meranie a reakcia na podnet.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: demonštrácia, riešenie problémových úloh, praktické cvičenie na počítači, heuristická metóda. Formy: individuálna, práca vo dvojiciach.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 9 -->
+      <tr>
+        <td><span class="okruh">Algoritmické riešenie problémov</span><span class="celok">hľadanie a opravovanie chýb</span></td>
+        <td>
+          <ul>
+            <li>rozpoznať, že program pracuje nesprávne,</li>
+            <li>hľadať chybu vo vlastnom, nesprávne pracujúcom programe a opraviť ju,</li>
+            <li>zistiť, pre aké vstupy, v ktorých prípadoch, situáciách program pracuje nesprávne,</li>
+            <li>diskutovať a argumentovať o správnosti riešenia (svojho aj cudzieho),</li>
+            <li>rozlíšiť chybu pri realizácii od chyby v zápise,</li>
+            <li>doplniť, dokončiť, modifikovať rozpracované riešenie,</li>
+            <li>navrhnúť vylepšenie.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> chyba v postupnosti príkazov (zlý príkaz, chýbajúci príkaz, vymenený príkaz alebo príkaz navyše), chyba v algoritmoch s cyklami, s vetvením a s premennými, chyba pri realizácii (logická chyba), chyba v zápise (syntaktická chyba)
+          <span class="lbl">Procesy</span> hľadanie chyby
+        </td>
+        <td>Žiak nájde a opraví chybu vo vlastnom programe, rozlíši logickú chybu od chyby v zápise a navrhne vylepšenie riešenia.</td>
+        <td>Matematika – overovanie správnosti postupu; Slovenský jazyk a literatúra – argumentácia a zdôvodňovanie.</td>
+        <td>OSR, TPPZ</td>
+        <td>Metódy: riešenie problémových úloh, riadený rozhovor/diskusia, heuristická metóda, praktické cvičenie na počítači. Formy: individuálna, práca vo dvojiciach, skupinová.</td>
+        <td class="hod">2</td>
+      </tr>
+
+      <!-- 10 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca so súbormi a priečinkami</span></td>
+        <td>
+          <ul>
+            <li>orientovať sa v štruktúre priečinkov počítača,</li>
+            <li>presúvať, mazať, premenúvať priečinky,</li>
+            <li>vyhľadať súbor alebo priečinok,</li>
+            <li>navrhnúť štruktúru priečinkov,</li>
+            <li>preorganizovať súbory do danej štruktúry priečinkov,</li>
+            <li>zistiť parametre súborov, priečinkov.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> rôzne typy súborov pre rôzne typy informácií (súbor s obrázkom, súbor s textom, súbor s tabuľkou), cesta k súboru a priečinku ako zápis, ktorý určuje umiestnenie súboru a priečinku v štruktúre priečinkov
+        </td>
+        <td>Žiak sa orientuje v štruktúre priečinkov, navrhne a preorganizuje ju, vyhľadá súbor a zistí jeho parametre.</td>
+        <td>Matematika – hierarchia a triedenie; Slovenský jazyk a literatúra – usporiadanie a pomenovanie.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, práca s návodom. Formy: individuálna, frontálna.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 11 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca v operačnom systéme</span></td>
+        <td>
+          <ul>
+            <li>vypnúť nereagujúcu alebo chybnú aplikáciu,</li>
+            <li>ovládať operačný systém na používateľskej úrovni,</li>
+            <li>preniesť informácie medzi spustenými aplikáciami pomocou schránky,</li>
+            <li>použiť nástroje na prispôsobenie si (pracovného) prostredia v počítači,</li>
+            <li>skúmať nové možnosti operačného systému,</li>
+            <li>použiť rôzny aplikačný softvér, ktorý je primeraný veku.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> schránka ako miesto na krátkodobé uchovávanie alebo prenášanie údajov, operačný systém ako softvér, aplikácia ako softvér
+          <span class="lbl">Procesy</span> nastavenie zvuku, pracovnej plochy, klávesnice, používanie nástrojov na simulovanie, modelovanie
+        </td>
+        <td>Žiak ovláda operačný systém na používateľskej úrovni, prenáša údaje cez schránku, vypne nereagujúcu aplikáciu a prispôsobí si pracovné prostredie.</td>
+        <td>Fyzika – modelovanie a simulácia; Matematika – nastavenia a parametre.</td>
+        <td>TPPZ, OSR</td>
+        <td>Metódy: demonštrácia, praktické cvičenie na počítači, práca s návodom. Formy: individuálna, frontálna.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 12 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">počítač a prídavné zariadenia</span></td>
+        <td>
+          <ul>
+            <li>pracovať s pamäťovými a prídavnými zariadeniami: prenášať, ukladať, kopírovať informácie,</li>
+            <li>pracovať s prídavnými zariadeniami (napr. naskenovať, vytlačiť dokument, nahrať zvuk, zosnímať obraz fotoaparátom alebo kamerou),</li>
+            <li>skúmať nové možnosti použitia konkrétneho hardvéru,</li>
+            <li>porovnať klady a zápory počítačov rôznych typov (napr. stolný počítač, notebook, tablet),</li>
+            <li>rozlíšiť vstupné a výstupné zariadenia.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> program, procesor, pamäť
+          <span class="lbl">Vlastnosti a vzťahy</span> počítač ako zariadenie s procesorom a pamäťou, pamäť si pamätá programy a údaje, pamäť v počítači ako zariadenie na (krátkodobé) uchovanie informácií, disk v počítači ako zariadenie na dlhodobé uchovanie informácií, procesor vykonáva programy (program ako návod pre procesor), tlačiareň, reproduktor/slúchadlá ako zariadenia sprostredkovanie výstupu, skener, digitálny fotoaparát, kamera, mikrofón ako zariadenia na digitalizáciu údajov, rozdiel medzi hardvérom a softvérom
+        </td>
+        <td>Žiak vysvetlí, že počítač je zariadenie s procesorom a pamäťou, rozlíši vstupné a výstupné zariadenia a porovná klady a zápory rôznych typov počítačov.</td>
+        <td>Fyzika – funkcia zariadení, signál a záznam; Technika – hardvér a jeho použitie.</td>
+        <td>TPPZ, ENV</td>
+        <td>Metódy: výklad, demonštrácia, riadený rozhovor, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 13 -->
+      <tr>
+        <td><span class="okruh">Softvér a hardvér</span><span class="celok">práca v počítačovej sieti a na internete</span></td>
+        <td>
+          <ul>
+            <li>orientovať sa v lokálnej počítačovej sieti,</li>
+            <li>pracovať so sieťovými zariadeniami (napr. tlačiareň, skener),</li>
+            <li>diskutovať o výhodách a nevýhodách práce v počítačovej sieti.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> sieť, doména
+          <span class="lbl">Vlastnosti a vzťahy</span> cesta (adresa) ako zápis, ktorý identifikuje počítač, zariadenie alebo údaje v sieti, vlastnosti priečinkov a prístupové práva v sieti, počítačová sieť ako prepojenie počítačov a zariadení, internet ako celosvetová počítačová sieť, štruktúra webovej adresy, štruktúra mailovej adresy
+        </td>
+        <td>Žiak sa orientuje v lokálnej sieti, pracuje so sieťovými zariadeniami a vysvetlí štruktúru webovej a mailovej adresy.</td>
+        <td>Fyzika – prenos údajov; Občianska náuka – internet a spoločnosť.</td>
+        <td>MEV, TPPZ</td>
+        <td>Metódy: výklad, demonštrácia, riadený rozhovor/diskusia, praktické cvičenie na počítači. Formy: frontálna, individuálna.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 14 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">bezpečnosť a riziká</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o rizikách na internete,</li>
+            <li>zhodnotiť, ktoré informácie musia byť chránené pred zneužitím,</li>
+            <li>aplikovať pravidlá pre zabezpečenie prístupu do e-mailu, do komunity, do počítača a proti neoprávnenému použitiu,</li>
+            <li>posúdiť riziká práce na počítači so škodlivým softvérom,</li>
+            <li>diskutovať o počítačovej kriminalite,</li>
+            <li>diskutovať o dôveryhodnosti informácií na webe,</li>
+            <li>diskutovať o rizikách kriminálneho a nelegálneho obsahu.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Vlastnosti a vzťahy</span> vírus ako škodlivý softvér, spam ako nevyžiadaná správa, antivírový program ako nástroj na obranu proti vírusom, kvalita hesla ako mechanizmus zabezpečenia, dôveryhodnosť získaných informácií, riziká na internete a sociálnych sieťach
+          <span class="lbl">Procesy</span> šírenie počítačových vírusov a spamov, bezpečné a etické správanie sa na internete, činnosť hekerov
+        </td>
+        <td>Žiak posúdi riziká na internete, chráni citlivé informácie a aplikuje pravidlá bezpečného zabezpečenia prístupu a hesla.</td>
+        <td>Občianska náuka – právo a bezpečnosť; Etická výchova – etické správanie online.</td>
+        <td>AIG, MEV, OŽZ, OSR</td>
+        <td>Metódy: riadený rozhovor/diskusia, riešenie problémových úloh, praktické cvičenie na počítači. Formy: frontálna, skupinová.</td>
+        <td class="hod">1</td>
+      </tr>
+
+      <!-- 15 -->
+      <tr>
+        <td><span class="okruh">Informačná spoločnosť</span><span class="celok">legálnosť používania</span></td>
+        <td>
+          <ul>
+            <li>diskutovať o dodržiavaní základných princípov autorských práv,</li>
+            <li>diskutovať, či bolo dielo legálne nadobudnuté, a o tom, ako sa dá ďalej používať,</li>
+            <li>diskutovať o právnych dôsledkoch nelegálne používaného diela,</li>
+            <li>diskutovať o právnych dôsledkoch publikovania kriminálneho a nelegálneho obsahu.</li>
+          </ul>
+        </td>
+        <td>
+          <span class="lbl">Pojmy</span> texty, obrázky, hudba, filmy, ...
+          <span class="lbl">Vlastnosti a vzťahy</span> autorské právo a jeho vzťah k autorovi, dielu a jeho použitiu, bezplatný softvér a platený softvér
+          <span class="lbl">Procesy</span> legálnosť a nelegálnosť používania softvéru a informácií
+        </td>
+        <td>Žiak vysvetlí základné princípy autorských práv, posúdi legálnosť nadobudnutia a používania diela a právne dôsledky nelegálneho obsahu.</td>
+        <td>Občianska náuka – právo a duševné vlastníctvo; Etická výchova – zodpovednosť a čestnosť.</td>
+        <td>AIG, MEV, OSR, FG</td>
+        <td>Metódy: riadený rozhovor/diskusia, riešenie problémových úloh, práca s textom. Formy: frontálna, skupinová.</td>
+        <td class="hod">2</td>
+      </tr>
+
+    </tbody>
+    <tfoot><tr><td colspan="7">SPOLU – 8. ročník</td><td class="hod">33</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="teacher-note">
+    <h4>Poznámky pre učiteľa</h4>
+    <ul>
+      <li>Ťažisko je <b>programovanie</b> (vetvenie, premenné). Postupujte od malých úloh: novú konštrukciu najprv ukážte, potom nechajte skúšať a ladiť.</li>
+      <li>Hľadanie a opravovanie chýb (ladenie) je plnohodnotná zručnosť — vyhraďte naň čas a nechajte deti argumentovať o správnosti riešenia.</li>
+      <li>Bezpečnosť, autorské práva a kriminalitu online preberajte cez reálne prípady primerané veku.</li>
+          <li><b>AI gramotnosť</b>: princípy fungovania AI (úloha dát, pravdepodobnostná povaha, možné skreslenia), riziká a etické/spoločenské/environmentálne súvislosti, digitálny wellbeing a rovnováha medzi digitálnym a ľudským svetom.</li>
+    </ul>
+  </div>
+</section>
+  <div class="src">
+    <b>Zdroj:</b> Inovovaný Štátny vzdelávací program – Informatika (1. a 2. stupeň ZŠ, primárne a nižšie
+    stredné vzdelávanie). Štátny pedagogický ústav / Ministerstvo školstva, vedy, výskumu a športu SR;
+    schválený 6. 2. 2015, platný od 1. 9. 2015 (PDF verzia vzdelávacích štandardov 3. 1. 2022).
+    Hodinová dotácia podľa Rámcového učebného plánu pre ZŠ s vyučovacím jazykom slovenským.
+    Výkonový a obsahový štandard sú prevzaté verne; rozdelenie tematických celkov do ročníkov, počty hodín,
+    výstupy, medzipredmetové vzťahy, prierezové témy a metódy/formy sú spracované v rámci ŠkVP.
+    <br><b>Verzia 2:</b> zapracovaný <b>Dodatok č. 17</b> k ŠVP (MŠVVaM SR, č. 2026/10555:2-A3610, schválený
+    23. 2. 2026, účinný od 1. 3. 2026), ktorým sa dopĺňa prierezová téma <b>AI gramotnosť</b> pre 1. aj 2. stupeň ZŠ.
+  </div>
+
+</main>
+</body>
+</html>

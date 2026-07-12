@@ -1,0 +1,234 @@
+---
+permalink: /osnovy/index.html
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<!-- Created: 2026-07-12 | Last updated: 2026-07-12 -->
+<!-- REAL TEAM Digital — Učebné osnovy pre ZŠ (standalone Slovak landing page) -->
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hotové učebné osnovy Informatika pre 3.–8. ročník ZŠ podľa iŠVP, vrátane AI gramotnosti (Dodatok č. 17). Na stiahnutie ako HTML, PDF a editovateľný DOCX. Ukážka zadarmo.">
+<title>Učebné osnovy pre ZŠ – Informatika 3.–8. ročník | REAL TEAM Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#faf7f1; --paper-deep:#f3eee4; --ink:#28241d; --ink-soft:#5c554a;
+  --rust:#b3543f; --rust-dark:#8f3f2e; --rule:#e4dccc; --line:rgba(90,120,180,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Lora',serif;line-height:1.2}
+.wrap{max-width:880px;margin:0 auto;padding:0 22px}
+.topbar{background:var(--ink);color:#f3efe6;font-size:.85em;text-align:center;padding:8px 16px;letter-spacing:.4px}
+.topbar b{color:#f0b9a8}
+
+/* hero as notebook paper */
+.hero{position:relative;background:
+  repeating-linear-gradient(to bottom,transparent 0 31px,var(--line) 31px 32px),
+  linear-gradient(#fffdf8,#fffdf8);
+  border-bottom:1px solid var(--rule);overflow:hidden}
+.hero::before{content:"";position:absolute;top:0;bottom:0;left:56px;width:2px;background:rgba(179,84,63,.35)}
+.hero .wrap{padding:72px 22px 64px;position:relative}
+.kicker{display:inline-block;font-weight:700;font-size:.8em;letter-spacing:2.5px;text-transform:uppercase;color:var(--rust);margin-bottom:18px}
+.hero h1{font-size:clamp(1.9em,4.5vw,3em);font-weight:700;max-width:15em}
+.hero h1 em{font-style:italic;color:var(--rust)}
+.hero p.lead{margin:22px 0 8px;font-size:1.15em;max-width:34em;color:var(--ink-soft)}
+.stamp{position:absolute;right:24px;top:56px;transform:rotate(6deg);border:2px dashed var(--rust);color:var(--rust);border-radius:8px;padding:10px 14px;font-weight:700;font-size:.8em;letter-spacing:1.5px;text-transform:uppercase;text-align:center;background:rgba(255,255,255,.65)}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:20px;transform:rotate(-2deg)}}
+
+.btnrow{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-block;padding:14px 30px;border-radius:6px;font-weight:700;text-decoration:none;font-size:1.02em;transition:transform .15s ease,box-shadow .15s ease}
+.btn-primary{background:var(--rust);color:#fff;box-shadow:0 3px 0 var(--rust-dark)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--rust-dark)}
+.btn-ghost{border:2px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.price-note{font-size:.9em;color:var(--ink-soft)}
+
+section{padding:58px 0}
+section.alt{background:var(--paper-deep)}
+h2{font-size:1.7em;margin-bottom:10px}
+.sub{color:var(--ink-soft);max-width:38em;margin-bottom:28px}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
+.card{background:#fffdf8;border:1px solid var(--rule);border-radius:8px;padding:22px}
+.card h3{font-size:1.05em;margin-bottom:8px;color:var(--rust-dark)}
+.card p{font-size:.95em;color:var(--ink-soft)}
+
+ul.ticks{list-style:none;margin-top:18px}
+ul.ticks li{padding:7px 0 7px 34px;position:relative}
+ul.ticks li::before{content:"✓";position:absolute;left:6px;color:var(--rust);font-weight:700}
+
+.steps{counter-reset:krok;margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.step{background:#fffdf8;border:1px solid var(--rule);border-radius:8px;padding:24px 22px 20px;position:relative}
+.step::before{counter-increment:krok;content:counter(krok);position:absolute;top:-16px;left:18px;background:var(--rust);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Lora',serif}
+.step h3{font-size:1em;margin:6px 0 6px}
+.step p{font-size:.93em;color:var(--ink-soft)}
+
+details{background:#fffdf8;border:1px solid var(--rule);border-radius:8px;margin-bottom:10px;padding:0 20px}
+details summary{cursor:pointer;font-weight:700;padding:15px 0;list-style-position:outside}
+details p{padding:0 0 16px;color:var(--ink-soft);font-size:.96em}
+details p+p{margin-top:8px}
+
+.cta-final{text-align:center}
+.cta-final .btnrow{justify-content:center}
+
+.offer-stack{max-width:640px;margin:26px auto 0;background:#fffdf8;border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.offer-row{display:flex;justify-content:space-between;gap:16px;padding:13px 20px;border-bottom:1px solid var(--rule);font-size:.97em}
+.offer-row .val{white-space:nowrap;font-weight:600}
+.offer-row.bonus .val{color:var(--rust)}
+.offer-row.bonus .val s{color:var(--ink-soft);font-weight:400;margin-right:6px}
+.offer-row.total{background:var(--paper-deep);font-weight:700}
+.offer-row.total .val s{color:var(--ink-soft)}
+.offer-row.today{background:var(--rust);color:#fff;font-weight:700;font-size:1.1em;border-bottom:none}
+.offer-row.today .val{font-family:'Lora',serif;font-size:1.2em}
+
+footer{background:var(--ink);color:#c9c2b4;font-size:.86em;padding:34px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
+footer a{color:#f0b9a8;text-decoration:none}
+.badge-line{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.badge{border:1.5px solid var(--rule);background:#fffdf8;border-radius:100px;padding:6px 14px;font-size:.8em;font-weight:600;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<div class="topbar">Učebné osnovy musia byť zverejnené do <b>31. 8.</b> – tento dokument vám ušetrí desiatky hodín.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Pre základné školy · podľa iŠVP 2015</span>
+    <h1>Učebné osnovy <em>Informatika</em><br>3.–8. ročník, hotové na zverejnenie.</h1>
+    <p class="lead">Kompletný dokument pre všetkých šesť ročníkov. Výkonové a obsahové štandardy verne zo štátneho vzdelávacieho programu, doplnené o výstupy, medzipredmetové vzťahy, prierezové témy, metódy, hodinové dotácie a poznámky pre učiteľa. Vrátane novej prierezovej témy <b>AI gramotnosť</b> (Dodatok č. 17, účinný od 1. 3. 2026).</p>
+    <div class="stamp">V súlade so ŠVP<br>vrátane Dodatku č. 17</div>
+    <div class="btnrow">
+      <a class="btn btn-primary" href="STRIPE_LINK_INF38">Kúpiť kompletné osnovy – 15 €</a>
+      <a class="btn btn-ghost" href="#ukazka">Ukážka zadarmo</a>
+    </div>
+    <p class="price-note" style="margin-top:12px">Okamžité stiahnutie po zaplatení · HTML + PDF + editovateľný DOCX</p>
+    <div class="badge-line">
+      <span class="badge">6 ročníkov × 33 hodín</span>
+      <span class="badge">8-stĺpcová tabuľka pre každý ročník</span>
+      <span class="badge">Poznámky pre učiteľa</span>
+      <span class="badge">Odstupňovaná náročnosť 3.→8.</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Prečo tento dokument existuje</h2>
+    <p class="sub">Každá škola musí mať učebné osnovy vypracované a zverejnené. Štátny vzdelávací program však definuje štandardy na dvojice ročníkov – rozdelenie do jednotlivých ročníkov, hodinové dotácie a celá pedagogická nadstavba je práca, ktorá ostáva na učiteľovi. Presne túto prácu sme urobili za vás, poctivo a bez kopírovania cudzích dokumentov.</p>
+    <div class="cols">
+      <div class="card"><h3>Verné štandardy</h3><p>Výkonový a obsahový štandard je prevzatý doslovne z oficiálnych dokumentov ŠVP (verzia z minedu.sk). Žiadne parafrázy, žiadne vymyslené pojmy – presne to, čo kontroluje inšpekcia.</p></div>
+      <div class="card"><h3>Rozdelenie do ročníkov</h3><p>Tematické celky sú rozdelené do ročníkov 3.–8. so scaffoldingom: celok, ktorý sa vracia vo vyššom ročníku, je náročnejší a je to viditeľné v názve aj vo výstupe.</p></div>
+      <div class="card"><h3>AI gramotnosť už zapracovaná</h3><p>Nová prierezová téma AIG podľa Dodatku č. 17 k ŠVP (účinný od 1. 3. 2026) je integrovaná do relevantných celkov a poznámok pre učiteľa – nemusíte ju dopĺňať sami.</p></div>
+      <div class="card"><h3>Editovateľné formáty</h3><p>Dostanete HTML (na zverejnenie na web školy), PDF (na tlač a do šanónu) a DOCX (doplníte hlavičku školy a upravíte, čo potrebujete).</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="obsah">
+  <div class="wrap">
+    <h2>Čo presne dostanete</h2>
+    <p class="sub">Jeden ucelený dokument, pre každý ročník samostatná kapitola s tabuľkou a poznámkami pre učiteľa.</p>
+    <ul class="ticks">
+      <li><b>6 ročníkov</b> (3.–8., každý 1 hodina týždenne = 33 hodín ročne, presne podľa rámcového učebného plánu)</li>
+      <li><b>8 stĺpcov pre každý celok:</b> tematický celok · výkonový štandard · obsahový štandard · výkon na konci celku · medzipredmetové vzťahy · prierezové témy · metódy a formy · počet hodín</li>
+      <li><b>Poznámky pre učiteľa</b> ku každému ročníku – praktické, veku primerané (napr. ako zaviesť prihlasovanie do konta v 3. ročníku)</li>
+      <li><b>Prierezové témy</b> z oficiálneho zoznamu iŠVP vrátane AI gramotnosti (AIG)</li>
+      <li><b>Legenda skratiek a zdroje</b> – dokument sa dá zverejniť tak, ako je, stačí doplniť hlavičku školy</li>
+    </ul>
+  </div>
+</section>
+
+<section id="ukazka">
+  <div class="wrap">
+    <h2>Ukážka zadarmo: celý 3. ročník</h2>
+    <p class="sub">Žiadny skrátený náhľad – kompletný 3. ročník so všetkými celkami, hodinami a poznámkami. Presne v tej kvalite, v akej dostanete všetkých šesť ročníkov. Nechajte nám e-mail a ukážku máte okamžite.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href="https://form.jotform.com/261925738853066">Získať ukážku zadarmo</a>
+    </div>
+    <p class="price-note" style="margin-top:10px">Žiadny spam – ozveme sa už len vtedy, keď vyjdú osnovy ďalších predmetov.</p>
+  </div>
+</section>
+
+<section class="alt" id="ponuka">
+  <div class="wrap">
+    <h2>Kúpite 3 ročníky. Dostanete šesť – a k tomu bonusy.</h2>
+    <p class="sub">Platíte za učebné osnovy 5.–7. ročníka. Všetko ostatné pridávame ako bonus, aby ste mali predmet vybavený jedným nákupom.</p>
+    <div class="offer-stack">
+      <div class="offer-row"><span>Učebné osnovy Informatika – 5., 6. a 7. ročník</span><span class="val">30 €</span></div>
+      <div class="offer-row bonus"><span><b>BONUS 1:</b> 3. a 4. ročník kompletné</span><span class="val"><s>20 €</s> zadarmo</span></div>
+      <div class="offer-row bonus"><span><b>BONUS 2:</b> 8. ročník kompletný</span><span class="val"><s>10 €</s> zadarmo</span></div>
+      <div class="offer-row bonus"><span><b>BONUS 3:</b> Editovateľný DOCX – doplníte hlavičku školy</span><span class="val"><s>10 €</s> zadarmo</span></div>
+      <div class="offer-row bonus"><span><b>BONUS 4:</b> AI gramotnosť (Dodatok č. 17) už integrovaná</span><span class="val"><s>15 €</s> zadarmo</span></div>
+      <div class="offer-row bonus"><span><b>BONUS 5:</b> Aktualizácie pri zmenách ŠVP do 30. 6. 2027</span><span class="val">zadarmo</span></div>
+      <div class="offer-row total"><span>Celková hodnota</span><span class="val"><s>85 €</s></span></div>
+      <div class="offer-row today"><span>Dnes, do 31. 8.</span><span class="val">15 €</span></div>
+    </div>
+    <div class="btnrow" style="justify-content:center;margin-top:26px">
+      <a class="btn btn-primary" href="STRIPE_LINK_INF38">Kúpiť za 15 € – kým platí letná cena</a>
+    </div>
+    <p class="price-note" style="text-align:center;margin-top:10px">Od 1. 9. sa cena zvyšuje. Okamžité stiahnutie po zaplatení.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Ako to funguje</h2>
+    <div class="steps">
+      <div class="step"><h3>Zaplatíte online</h3><p>Bezpečná platba kartou cez Stripe. Žiadna registrácia, celé to trvá minútu.</p></div>
+      <div class="step"><h3>Okamžite stiahnete</h3><p>Hneď po zaplatení vás presmerujeme na stránku so súbormi: HTML, PDF a DOCX.</p></div>
+      <div class="step"><h3>Doplníte hlavičku školy</h3><p>V DOCX doplníte názov školy a prípadné špecifiká. Dokument je pripravený na prerokovanie a zverejnenie.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="namieru">
+  <div class="wrap">
+    <h2>Potrebujete osnovy na mieru vašej školy?</h2>
+    <p class="sub">Pripravíme učebné osnovy prispôsobené podmienkam vašej školy – vaše hodinové dotácie a disponibilné hodiny, exkurzie a akcie vo vašom okolí (múzeá, pamiatky, inštitúcie), vybavenie a zloženie tried. Vyplníte krátky dotazník o podmienkach školy, my pripravíme dokument, ktorý by pri inšpekcii obstál ako váš vlastný – pretože ním bude.</p>
+    <div class="btnrow">
+      <a class="btn btn-ghost" href="https://form.jotform.com/261924334207050">Vyplniť dotazník – nezáväzne</a>
+    </div>
+    <p class="price-note" style="margin-top:10px">Cenu vám povieme vopred podľa rozsahu (počet predmetov a ročníkov). Ozveme sa do 24 hodín.</p>
+  </div>
+</section>
+
+<section class="alt" id="faq">
+  <div class="wrap">
+    <h2>Časté otázky</h2>
+    <details><summary>Je dokument v súlade so štátnym vzdelávacím programom?</summary><p>Áno. Výkonové a obsahové štandardy sú prevzaté doslovne z oficiálnych dokumentov inovovaného ŠVP (2015) stiahnutých z minedu.sk, vrátane rámcového učebného plánu. Rozdelenie celkov do ročníkov a pedagogická nadstavba (výstupy, metódy, medzipredmetové vzťahy) sú spracované v rámci školského vzdelávacieho programu – presne tak, ako to predpokladá legislatíva. V dokumente je to takto aj označené.</p></details>
+    <details><summary>Obsahuje aj novú tému AI gramotnosť?</summary><p>Áno. Dodatok č. 17 k ŠVP (schválený 23. 2. 2026, účinný od 1. 3. 2026) zaviedol novú prierezovú tému AI gramotnosť (AIG). V našom dokumente je integrovaná do relevantných tematických celkov a do poznámok pre učiteľa. Dodatok nemení štandardy ani hodinové dotácie, preto sa nemení ani štruktúra osnov.</p></details>
+    <details><summary>Môžem dokument upravovať?</summary><p>Áno, práve na to slúži formát DOCX. Doplníte hlavičku a názov školy, upravíte poznámky, prispôsobíte metódy. HTML verziu môžete zverejniť na webe školy, PDF vytlačiť do dokumentácie.</p></details>
+    <details><summary>Pre koho je licencia?</summary><p>Zakúpením získava vaša škola právo dokument upraviť, používať a zverejniť pod svojou hlavičkou. Nekupujete „papier", kupujete ušetrené desiatky hodín práce. Prosíme, neposielajte súbory ďalej mimo vašej školy – každá ďalšia škola si vie ukážku aj plnú verziu zaobstarať sama.</p></details>
+    <details><summary>Dostanem faktúru?</summary><p>Áno. Predávajúcim je REAL TEAM Sport s.r.o., IČO 31 369 049. Po zaplatení dostanete potvrdenie e-mailom; ak potrebujete faktúru na školu, napíšte nám na <a href="mailto:jakub@realteamsport.eu">jakub@realteamsport.eu</a> a obratom ju pošleme.</p></details>
+    <details><summary>Čo 9. ročník?</summary><p>Informatika v 9. ročníku nie je v povinnej časti rámcového učebného plánu, preto v základnom dokumente nie je. Ak ju vaša škola učí z disponibilných hodín, pripravíme vám ju na mieru – použite dotazník vyššie.</p></details>
+    <details><summary>Budú aj ďalšie predmety?</summary><p>Áno, ako ďalší pripravujeme anglický jazyk pre 3.–9. ročník. Ak chcete vedieť, keď vyjde, napíšte nám na <a href="mailto:jakub@popluhar.at">jakub@popluhar.at</a> alebo vyplňte dotazník a spomeňte to v poznámke.</p></details>
+    <details><summary>Kto za tým stojí?</summary><p>REAL TEAM Digital je digitálna značka spoločnosti REAL TEAM Sport s.r.o. Dokument vznikol v spolupráci s učiteľkou s dlhoročnou praxou na základnej škole a skúsenosťou s tvorbou ŠkVP a prípravou na inšpekciu.</p></details>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Zverejnené do 31. 8. – bez prepísaných víkendov</h2>
+    <p class="sub" style="margin:10px auto 0;max-width:34em">Jeden predmet vybavený dnes. Za cenu jednej pizze s kolegami.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href="STRIPE_LINK_INF38">Kúpiť kompletné osnovy – 15 €</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 REAL TEAM Sport s.r.o. · IČO 31 369 049 · Pri kríži 18, 841 02 Bratislava</div>
+    <div><a href="mailto:jakub@realteamsport.eu">jakub@realteamsport.eu</a> · <a href="/">realteamdigital.sk</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
