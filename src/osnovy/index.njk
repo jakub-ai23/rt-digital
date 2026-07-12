@@ -87,6 +87,18 @@ details p+p{margin-top:8px}
 .offer-row.today{background:var(--rust);color:#fff;font-weight:700;font-size:1.1em;border-bottom:none}
 .offer-row.today .val{font-family:'Lora',serif;font-size:1.2em}
 
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:28px;align-items:stretch}
+.plan{background:#fffdf8;border:1px solid var(--rule);border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;position:relative}
+.plan.featured{border:2px solid var(--rust);box-shadow:0 6px 22px rgba(179,84,63,.12)}
+.plan .ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--rust);color:#fff;font-size:.75em;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:100px}
+.plan h3{font-size:1.15em;margin-bottom:6px}
+.plan-price{font-family:'Lora',serif;font-size:1.9em;font-weight:700;color:var(--rust-dark);margin-bottom:14px}
+.plan-price s{color:var(--ink-soft);font-weight:400;font-size:.65em;margin-right:8px}
+.plan ul{list-style:none;margin-bottom:20px;flex-grow:1}
+.plan ul li{padding:6px 0 6px 26px;position:relative;font-size:.93em;color:var(--ink-soft)}
+.plan ul li::before{content:"✓";position:absolute;left:2px;color:var(--rust);font-weight:700}
+.plan .btn{text-align:center}
+
 footer{background:var(--ink);color:#c9c2b4;font-size:.86em;padding:34px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
 footer a{color:#f0b9a8;text-decoration:none}
@@ -108,7 +120,7 @@ footer a{color:#f0b9a8;text-decoration:none}
       <a class="btn btn-primary" href="https://form.jotform.com/261924334207050">Objednať osnovy pre moju školu</a>
       <a class="btn btn-ghost" href="#informatika">Informatika hotová hneď – 15 €</a>
     </div>
-    <p class="price-note" style="margin-top:12px">Zaplatíte 3 ročníky, zvyšné ročníky predmetu dostanete ako bonus · HTML + PDF + editovateľný DOCX</p>
+    <p class="price-note" style="margin-top:12px">Zaplatíte 3 ročníky, zvyšné ročníky predmetu sú bonus · dodanie do 24 hodín · HTML + PDF + editovateľný DOCX</p>
     <div class="badge-line">
       <span class="badge">Všetky predmety ZŠ</span>
       <span class="badge">8-stĺpcová tabuľka pre každý ročník</span>
@@ -148,24 +160,48 @@ footer a{color:#f0b9a8;text-decoration:none}
 
 <section id="objednavka">
   <div class="wrap">
-    <h2>Zaplatíte 3 ročníky. Zvyšok predmetu je bonus.</h2>
-    <p class="sub">Jednoduchá cenová logika pre každý predmet: ročník stojí 10 €, platíte však najviac tri. Všetky ďalšie ročníky toho istého predmetu dostanete ako bonus. Príklad: anglický jazyk pre 5.–9. ročník – zaplatíte 5., 6. a 7. ročník (30 €), ročníky 8. a 9. sú zadarmo.</p>
-    <div class="offer-stack">
-      <div class="offer-row"><span>Prvé tri ročníky vášho predmetu (3 × 10 €)</span><span class="val">30 €</span></div>
-      <div class="offer-row bonus"><span><b>BONUS:</b> každý ďalší ročník predmetu</span><span class="val">zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS:</b> prispôsobenie podmienkam vašej školy (dotácie, exkurzie, vybavenie)</span><span class="val">zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS:</b> editovateľný DOCX + PDF + HTML na web školy</span><span class="val">zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS:</b> AI gramotnosť (Dodatok č. 17) integrovaná, kde patrí</span><span class="val">zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS:</b> aktualizácie pri zmenách ŠVP do 30. 6. 2027</span><span class="val">zadarmo</span></div>
-      <div class="offer-row today"><span>Jeden predmet, všetky jeho ročníky</span><span class="val">30 €</span></div>
+    <h2>Ročník stojí 10 €. Platíte však najviac tri.</h2>
+    <p class="sub">Všetky ďalšie ročníky toho istého predmetu dostanete ako bonus – učiteľ s piatimi či šiestimi triedami tak platí rovnako ako učiteľ s tromi. Vyberte si, čo sedí na vašu situáciu:</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Môj predmet</h3>
+        <div class="plan-price">30 €</div>
+        <ul>
+          <li>1 predmet, <b>všetky jeho ročníky</b> (platíte 3, zvyšok bonus)</li>
+          <li>prispôsobené podmienkam vašej školy</li>
+          <li>DOCX + PDF + HTML na web školy</li>
+          <li>AI gramotnosť (Dodatok č. 17) integrovaná</li>
+          <li>aktualizácie pri zmenách ŠVP do 30. 6. 2027</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://form.jotform.com/261924334207050">Objednať predmet</a>
+      </div>
+      <div class="plan featured">
+        <div class="ribbon">Odporúčame</div>
+        <h3>Moja aprobácia</h3>
+        <div class="plan-price"><s>60 €</s> 50 €</div>
+        <ul>
+          <li><b>2 predmety, všetky ročníky</b> – celá vaša aprobácia vybavená naraz</li>
+          <li>všetko z balíka Môj predmet, pre oba predmety</li>
+          <li>jedna objednávka, jeden e-mail, hotovo</li>
+        </ul>
+        <a class="btn btn-primary" href="https://form.jotform.com/261924334207050">Objednať aprobáciu</a>
+      </div>
+      <div class="plan">
+        <h3>Celá škola</h3>
+        <div class="plan-price">od 190 €</div>
+        <ul>
+          <li><b>všetky predmety, všetky ročníky</b> – riaditeľ má zverejnené a pokoj</li>
+          <li>cena podľa veľkosti školy, povieme vopred</li>
+          <li>jednotná štruktúra naprieč celou školou</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://form.jotform.com/261924334207050">Vyžiadať ponuku</a>
+      </div>
     </div>
+    <p class="price-note" style="text-align:center;margin-top:20px"><b>Každý objednaný predmet dodáme do 24 hodín od platby.</b> Rozhodnutie je, samozrejme, na vás – ukážku máte zadarmo vyššie.</p>
     <div class="steps" style="margin-top:34px">
-      <div class="step"><h3>Vyplníte dotazník</h3><p>Predmet, ročníky a podmienky vašej školy. Trvá to 5 minút, je to nezáväzné.</p></div>
-      <div class="step"><h3>Potvrdíme cenu a termín</h3><p>Do 24 hodín dostanete e-mailom zhrnutie objednávky a termín dodania.</p></div>
-      <div class="step"><h3>Dodáme dokument</h3><p>Po zaplatení dostanete DOCX, PDF aj HTML – pripravené na prerokovanie a zverejnenie.</p></div>
-    </div>
-    <div class="btnrow" style="justify-content:center;margin-top:30px">
-      <a class="btn btn-primary" href="https://form.jotform.com/261924334207050">Objednať osnovy pre moju školu</a>
+      <div class="step"><h3>Vyplníte dotazník</h3><p>Predmet, ročníky a podmienky vašej školy. Stačí 5 minút, je to nezáväzné.</p></div>
+      <div class="step"><h3>Potvrdíme cenu a pošleme platbu</h3><p>Do 24 hodín dostanete e-mailom zhrnutie objednávky a platobný odkaz.</p></div>
+      <div class="step"><h3>Do 24 hodín od platby dodáme</h3><p>DOCX, PDF aj HTML – pripravené na prerokovanie a zverejnenie.</p></div>
     </div>
   </div>
 </section>
@@ -196,7 +232,7 @@ footer a{color:#f0b9a8;text-decoration:none}
       <div class="offer-row today"><span>Dnes, do 31. 8.</span><span class="val">15 €</span></div>
     </div>
     <div class="btnrow" style="justify-content:center;margin-top:26px">
-      <a class="btn btn-primary" href="STRIPE_LINK_INF38">Kúpiť za 15 € – kým platí letná cena</a>
+      <a class="btn btn-primary" href="https://buy.stripe.com/6oU14m8iSfjefdga3333W0c">Kúpiť za 15 € – kým platí letná cena</a>
     </div>
     <p class="price-note" style="text-align:center;margin-top:10px">Od 1. 9. sa cena zvyšuje. Okamžité stiahnutie po zaplatení.</p>
   </div>
@@ -212,7 +248,7 @@ footer a{color:#f0b9a8;text-decoration:none}
     <details><summary>Pre koho je licencia?</summary><p>Zakúpením získava vaša škola právo dokument upraviť, používať a zverejniť pod svojou hlavičkou. Nekupujete „papier", kupujete ušetrené desiatky hodín práce. Prosíme, neposielajte súbory ďalej mimo vašej školy – každá ďalšia škola si vie ukážku aj plnú verziu zaobstarať sama.</p></details>
     <details><summary>Dostanem faktúru?</summary><p>Áno. Predávajúcim je REAL TEAM Sport s.r.o., IČO 31 369 049. Po zaplatení dostanete potvrdenie e-mailom; ak potrebujete faktúru na školu, napíšte nám na <a href="mailto:jakub@realteamsport.eu">jakub@realteamsport.eu</a> a obratom ju pošleme.</p></details>
     <details><summary>Ktoré predmety viete spracovať?</summary><p>Všetky predmety základnej školy, pre ktoré existuje vzdelávací štandard v štátnom vzdelávacom programe – jazyky, matematiku, prírodovedné aj výchovné predmety. Informatika je hotová na okamžité stiahnutie, ostatné predmety pripravujeme na objednávku cez dotazník. Cenu a termín potvrdíme do 24 hodín.</p></details>
-    <details><summary>Ako dlho trvá dodanie objednaného predmetu?</summary><p>Termín potvrdíme v ponuke podľa rozsahu – spravidla ide o dni, nie týždne. Ak sa blíži 31. 8., povedzte nám to v poznámke a prispôsobíme sa.</p></details>
+    <details><summary>Ako dlho trvá dodanie objednaného predmetu?</summary><p>Do 24 hodín od platby. Dotazník nám dá všetko, čo potrebujeme – podmienky školy, dotácie, ročníky – a dokument pripravíme obratom, nech je august pokojný.</p></details>
     <details><summary>Čo ročníky mimo povinnej dotácie (napr. informatika v 9. ročníku)?</summary><p>Ak vaša škola učí predmet z disponibilných hodín, spracujeme ho presne podľa vašich dotácií – uveďte to v dotazníku.</p></details>
     <details><summary>Kto za tým stojí?</summary><p>REAL TEAM Digital je digitálna značka spoločnosti REAL TEAM Sport s.r.o. Dokument vznikol v spolupráci s učiteľkou s dlhoročnou praxou na základnej škole a skúsenosťou s tvorbou ŠkVP a prípravou na inšpekciu.</p></details>
   </div>
