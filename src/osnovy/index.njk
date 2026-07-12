@@ -99,7 +99,8 @@ details p+p{margin-top:8px}
 .plan ul li::before{content:"✓";position:absolute;left:2px;color:var(--rust);font-weight:700}
 .plan .btn{text-align:center}
 .tierbtns{display:flex;flex-direction:column;gap:10px}
-.aprobacia{max-width:760px;margin:22px auto 0;background:#fffdf8;border:1px solid var(--rule);border-radius:10px;padding:18px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;text-align:center}
+.aprobacia{max-width:760px;margin:22px auto 0;background:#fffdf8;border:1px solid var(--rule);border-radius:10px;padding:20px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.aprobacia .btnrow{margin-top:0;justify-content:center}
 
 footer{background:var(--ink);color:#c9c2b4;font-size:.86em;padding:34px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
@@ -117,7 +118,7 @@ footer a{color:#f0b9a8;text-decoration:none}
     <img src="/img/logo-ucebne-plany.svg" alt="Učebné plány pre základné školy" style="width:min(320px,80%);margin-bottom:18px;display:block">
     <span class="kicker">Pre základné školy · každý predmet · podľa iŠVP</span>
     <h1>Počas prázdnin vám povedali, že potrebujete učebné osnovy?<br><em>Neviete, kde začať?</em></h1>
-    <p class="lead">Do 31. 8. musia byť zverejnené – a nikto vám nepovedal ako na to. My to vieme: ktorýkoľvek predmet, ktorýkoľvek ročník ZŠ, výkonové a obsahové štandardy verne zo štátneho vzdelávacieho programu, rozdelené do ročníkov, s metódami, prierezovými témami (vrátane novej <b>AI gramotnosti</b>, Dodatok č. 17) a poznámkami pre učiteľa. Prispôsobené vašej škole, dodané do 24 hodín. Vaše prázdniny ostanú prázdninami.</p>
+    <p class="lead">Do 31. 8. musia byť zverejnené – a nikto vám nepovedal ako na to. My to vieme: ktorýkoľvek predmet, ročníky 1.–9. ZŠ, výkonové a obsahové štandardy verne zo štátneho vzdelávacieho programu, rozdelené do ročníkov, s metódami, prierezovými témami (vrátane novej <b>AI gramotnosti</b>, Dodatok č. 17) a poznámkami pre učiteľa. Prispôsobené vašej škole, dodané do 24 hodín. Vaše prázdniny ostanú prázdninami.</p>
     <div class="stamp">V súlade so ŠVP<br>vrátane Dodatku č. 17</div>
     <div class="btnrow">
       <a class="btn btn-primary" href="#objednavka">Začnite hneď teraz</a>
@@ -198,9 +199,11 @@ footer a{color:#f0b9a8;text-decoration:none}
       </div>
     </div>
     <div class="aprobacia">
-      <b>Učíte dva predmety?</b> Celá aprobácia, všetky vaše triedy oboch predmetov:
-      <a class="btn btn-ghost" href="https://buy.stripe.com/6oU5kC1Uudb6e9cejj33W0m">ŠTART · 50 €</a>
-      <a class="btn btn-primary" href="https://buy.stripe.com/dRmdR8gPo7QM8OS4IJ33W0n">PROFI · 80 €</a>
+      <div><b>Učíte dva predmety?</b> Celá aprobácia, všetky vaše triedy oboch predmetov:</div>
+      <div class="btnrow">
+        <a class="btn btn-ghost" href="https://buy.stripe.com/6oU5kC1Uudb6e9cejj33W0m">ŠTART · 50 €</a>
+        <a class="btn btn-primary" href="https://buy.stripe.com/dRmdR8gPo7QM8OS4IJ33W0n">PROFI · 80 €</a>
+      </div>
     </div>
     <div class="steps" style="margin-top:34px">
       <div class="step"><h3>Vyberiete si balík</h3><p>Predmet, počet tried, ŠTART alebo PROFI. Zaplatíte kartou, trvá to minútu.</p></div>
@@ -225,13 +228,12 @@ footer a{color:#f0b9a8;text-decoration:none}
 <section class="alt" id="informatika">
   <div class="wrap">
     <h2>Informatika je hotová – stiahnete ju hneď, za letnú cenu.</h2>
-    <p class="sub">Prvý predmet z našej dielne je kompletný pre 3.–8. ročník. Neobjednávate, nečakáte: zaplatíte a o minútu sťahujete. Platíte za ročníky 5.–7., všetko ostatné je bonus.</p>
+    <p class="sub">Prvý predmet z našej dielne je kompletný pre 3.–8. ročník. Neobjednávate, nečakáte: zaplatíte a o minútu sťahujete.</p>
     <div class="offer-stack">
-      <div class="offer-row"><span>Učebné osnovy Informatika – 5., 6. a 7. ročník</span><span class="val">30 €</span></div>
-      <div class="offer-row bonus"><span><b>BONUS 1:</b> 3. a 4. ročník kompletné</span><span class="val"><s>20 €</s> zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS 2:</b> 8. ročník kompletný</span><span class="val"><s>10 €</s> zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS 3:</b> AI gramotnosť (Dodatok č. 17) už integrovaná</span><span class="val"><s>15 €</s> zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS 4:</b> Aktualizácie pri zmenách ŠVP do 30. 6. 2027</span><span class="val">zadarmo</span></div>
+      <div class="offer-row"><span>Všetkých 6 ročníkov kompletných (3.–8., spolu 198 hodín)</span><span class="val">✓</span></div>
+      <div class="offer-row"><span>AI gramotnosť (Dodatok č. 17) už integrovaná</span><span class="val">✓</span></div>
+      <div class="offer-row"><span>Poznámky pre učiteľa ku každému ročníku</span><span class="val">✓</span></div>
+      <div class="offer-row"><span>Aktualizácie pri zmenách ŠVP do 30. 6. 2027</span><span class="val">✓</span></div>
       <div class="offer-row today"><span>Dnes, do 31. 8. (ceny s DPH)</span><span class="val">ŠTART 15 € · PROFI 25 €</span></div>
     </div>
     <div class="btnrow" style="justify-content:center;margin-top:26px">
@@ -251,7 +253,7 @@ footer a{color:#f0b9a8;text-decoration:none}
     <details><summary>Môžem dokument upravovať?</summary><p>V balíku PROFI áno – dostanete editovateľný DOCX (doplníte hlavičku a názov školy, upravíte poznámky, prispôsobíte metódy) a Excel tematický plán. Balík ŠTART obsahuje PDF, ktoré vytlačíte do dokumentácie a zverejníte.</p></details>
     <details><summary>Pre koho je licencia?</summary><p>Zakúpením získava vaša škola právo dokument upraviť, používať a zverejniť pod svojou hlavičkou. Nekupujete „papier", kupujete ušetrené desiatky hodín práce. Prosíme, neposielajte súbory ďalej mimo vašej školy – každá ďalšia škola si vie ukážku aj plnú verziu zaobstarať sama.</p></details>
     <details><summary>Dostanem faktúru?</summary><p>Áno. Predávajúcim je REAL TEAM Sport s.r.o., IČO 31 369 049. Po zaplatení dostanete potvrdenie e-mailom; ak potrebujete faktúru na školu, napíšte nám na <a href="mailto:jakub@realteamsport.eu">jakub@realteamsport.eu</a> a obratom ju pošleme.</p></details>
-    <details><summary>Ktoré predmety viete spracovať?</summary><p>Všetky predmety základnej školy, pre ktoré existuje vzdelávací štandard v štátnom vzdelávacom programe – jazyky, matematiku, prírodovedné aj výchovné predmety. Informatika je hotová na okamžité stiahnutie, ostatné pripravujeme na objednávku podľa cenníka vyššie, dodanie do 24 hodín.</p></details>
+    <details><summary>Ktoré predmety viete spracovať?</summary><p>Všetky predmety základnej školy (ročníky 1.–9.), pre ktoré existuje vzdelávací štandard v štátnom vzdelávacom programe – jazyky, matematiku, prírodovedné aj výchovné predmety. Informatika je hotová na okamžité stiahnutie, ostatné pripravujeme na objednávku podľa cenníka vyššie, dodanie do 24 hodín.</p></details>
     <details><summary>Prečo sa platí podľa počtu tried?</summary><p>Lebo tak vyzerá váš úväzok. Trieda je 5.A, nie celý ročník – a vy učíte konkrétne triedy, niekedy ôsmakov áno a siedmakov nie. Plány potrebujete pre každú triedu vo svojom rozvrhu a triednej knihe, preto je cena odstupňovaná podľa toho, koľko tried predmetu učíte (1–2, 3–4, 5 a viac).</p></details>
     <details><summary>Ako dlho trvá dodanie objednaného predmetu?</summary><p>Do 24 hodín od platby. Dotazník nám dá všetko, čo potrebujeme – podmienky školy, dotácie, ročníky – a dokument pripravíme obratom, nech je august pokojný.</p></details>
     <details><summary>Čo ročníky mimo povinnej dotácie (napr. informatika v 9. ročníku)?</summary><p>Ak vaša škola učí predmet z disponibilných hodín, spracujeme ho presne podľa vašich dotácií – uveďte to v dotazníku.</p></details>
