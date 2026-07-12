@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="160" viewBox="0 0 560 160">
+  <rect width="560" height="160" fill="#faf7f1"/>
+  <!-- open book -->
+  <g transform="translate(20,26)">
+    <path d="M 60 96 C 40 82 14 80 2 84 L 2 18 C 14 14 40 16 60 30 Z" fill="#fffdf8" stroke="#28241d" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M 60 96 C 80 82 106 80 118 84 L 118 18 C 106 14 80 16 60 30 Z" fill="#fffdf8" stroke="#28241d" stroke-width="4" stroke-linejoin="round"/>
+    <!-- text lines left -->
+    <line x1="14" y1="34" x2="46" y2="42" stroke="#e4dccc" stroke-width="3"/>
+    <line x1="14" y1="48" x2="46" y2="56" stroke="#e4dccc" stroke-width="3"/>
+    <line x1="14" y1="62" x2="46" y2="70" stroke="#e4dccc" stroke-width="3"/>
+    <!-- checkmark right page -->
+    <path d="M 72 52 L 84 66 L 108 32" fill="none" stroke="#b3543f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="160" y="82" font-family="Georgia, 'Lora', serif" font-size="44" font-weight="700" fill="#28241d">Učebné plány</text>
+  <text x="162" y="116" font-family="Helvetica, 'Source Sans 3', sans-serif" font-size="19" letter-spacing="4" fill="#8f3f2e">HOTOVÉ DO 24 HODÍN</text>
+</svg>

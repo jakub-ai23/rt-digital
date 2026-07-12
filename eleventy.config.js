@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("src/osnovy/**/subory/**");
   eleventyConfig.addPassthroughCopy("src/osnovy/ukazka-dl-p3x8t2/subory");
   eleventyConfig.addPassthroughCopy("src/osnovy/dl-inf38-k7x2m9/subory");
+  eleventyConfig.addPassthroughCopy("src/osnovy/dl-inf38-profi-w4q7t8/subory");
 
   // --- Passthrough copies -----------------------------------
   // Static assets: CSS, JS, images, and CNAME for GitHub Pages

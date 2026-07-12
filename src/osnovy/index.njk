@@ -98,6 +98,8 @@ details p+p{margin-top:8px}
 .plan ul li{padding:6px 0 6px 26px;position:relative;font-size:.93em;color:var(--ink-soft)}
 .plan ul li::before{content:"✓";position:absolute;left:2px;color:var(--rust);font-weight:700}
 .plan .btn{text-align:center}
+.tierbtns{display:flex;flex-direction:column;gap:10px}
+.aprobacia{max-width:760px;margin:22px auto 0;background:#fffdf8;border:1px solid var(--rule);border-radius:10px;padding:18px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;text-align:center}
 
 footer{background:var(--ink);color:#c9c2b4;font-size:.86em;padding:34px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
@@ -112,6 +114,7 @@ footer a{color:#f0b9a8;text-decoration:none}
 
 <header class="hero">
   <div class="wrap">
+    <img src="/img/logo-ucebne-plany.svg" alt="Učebné plány pre základné školy" style="width:min(320px,80%);margin-bottom:18px;display:block">
     <span class="kicker">Pre základné školy · každý predmet · podľa iŠVP</span>
     <h1>Počas prázdnin vám povedali, že potrebujete učebné osnovy?<br><em>Neviete, kde začať?</em></h1>
     <p class="lead">Do 31. 8. musia byť zverejnené – a nikto vám nepovedal ako na to. My to vieme: ktorýkoľvek predmet, ktorýkoľvek ročník ZŠ, výkonové a obsahové štandardy verne zo štátneho vzdelávacieho programu, rozdelené do ročníkov, s metódami, prierezovými témami (vrátane novej <b>AI gramotnosti</b>, Dodatok č. 17) a poznámkami pre učiteľa. Prispôsobené vašej škole, dodané do 24 hodín. Vaše prázdniny ostanú prázdninami.</p>
@@ -120,7 +123,7 @@ footer a{color:#f0b9a8;text-decoration:none}
       <a class="btn btn-primary" href="#objednavka">Začnite hneď teraz</a>
       <a class="btn btn-ghost" href="#ukazka">Ukážka zadarmo</a>
     </div>
-    <p class="price-note" style="margin-top:12px">5 € za triedu · dodanie do 24 hodín · HTML + PDF + editovateľný DOCX · ceny s DPH</p>
+    <p class="price-note" style="margin-top:12px">od 10 € za predmet · dodanie do 24 hodín · ceny s DPH</p>
     <div class="badge-line">
       <span class="badge">Všetky predmety ZŠ</span>
       <span class="badge">8-stĺpcová tabuľka pre každý ročník</span>
@@ -160,24 +163,51 @@ footer a{color:#f0b9a8;text-decoration:none}
 
 <section id="objednavka">
   <div class="wrap">
-    <h2>Jedna trieda = 5 €. Také jednoduché to je.</h2>
-    <p class="sub">Platíte presne za triedy, ktoré učíte – nie za balíky, ktoré vám nesedia. Učíte angličtinu v 5.A, 5.B, ôsmakov áno, ale siedmakov nie? Kúpite si presne tieto triedy. Učiteľ s celým úväzkom aj učiteľ s dvoma triedami platí férovo za svoje.</p>
-    <div class="offer-stack">
-      <div class="offer-row"><span>1 trieda (napr. 5.A) – ktorýkoľvek predmet, prispôsobené vašej škole</span><span class="val">5 €</span></div>
-      <div class="offer-row bonus"><span><b>V cene:</b> editovateľný DOCX + PDF + HTML na web školy</span><span class="val">✓</span></div>
-      <div class="offer-row bonus"><span><b>V cene:</b> AI gramotnosť (Dodatok č. 17) integrovaná, kde patrí</span><span class="val">✓</span></div>
-      <div class="offer-row bonus"><span><b>V cene:</b> aktualizácie pri zmenách ŠVP do 30. 6. 2027</span><span class="val">✓</span></div>
-      <div class="offer-row today"><span>Napríklad: 6 tried (celý úväzok jedného predmetu)</span><span class="val">30 €</span></div>
+    <h2>Vyberte si predmet a počet tried. My spravíme zvyšok.</h2>
+    <p class="sub">Platíte podľa toho, koľko tried predmetu učíte – učiteľ s dvoma triedami platí menej než kolega s celým úväzkom. Učíte dva predmety? Celá aprobácia má vlastnú cenu.</p>
+    <div class="plans" style="max-width:760px;margin-left:auto;margin-right:auto">
+      <div class="plan">
+        <h3>ŠTART</h3>
+        <div class="plan-price">od 10 €</div>
+        <ul>
+          <li><b>PDF</b> na tlač, do šanónu a na zverejnenie</li>
+          <li>prispôsobené podmienkam vašej školy</li>
+          <li>AI gramotnosť (Dodatok č. 17) integrovaná</li>
+          <li>aktualizácie pri zmenách ŠVP do 30. 6. 2027</li>
+        </ul>
+        <div class="tierbtns">
+          <a class="btn btn-ghost" href="https://buy.stripe.com/4gMbJ0bv44EA4yCfnn33W0g">1–2 triedy · 10 €</a>
+          <a class="btn btn-ghost" href="https://buy.stripe.com/14A5kC9mW2ws5CG7UV33W0h">3–4 triedy · 20 €</a>
+          <a class="btn btn-ghost" href="https://buy.stripe.com/aFa7sK42C9YUaX0grr33W0i">5 a viac tried · 30 €</a>
+        </div>
+      </div>
+      <div class="plan featured">
+        <div class="ribbon">Odporúčame</div>
+        <h3>PROFI</h3>
+        <div class="plan-price">od 15 €</div>
+        <ul>
+          <li>všetko zo ŠTART, plus:</li>
+          <li><b>editovateľný DOCX</b> – hlavička školy, vlastné úpravy</li>
+          <li><b>Excel tematický plán</b> – priamo do triednej knihy</li>
+        </ul>
+        <div class="tierbtns">
+          <a class="btn btn-primary" href="https://buy.stripe.com/6oU5kCgPofje7KOb7733W0j">1–2 triedy · 15 €</a>
+          <a class="btn btn-primary" href="https://buy.stripe.com/3cIbJ06aK1so8OS7UV33W0k">3–4 triedy · 30 €</a>
+          <a class="btn btn-primary" href="https://buy.stripe.com/bJecN48iSb2YaX0cbb33W0l">5 a viac tried · 45 €</a>
+        </div>
+      </div>
+    </div>
+    <div class="aprobacia">
+      <b>Učíte dva predmety?</b> Celá aprobácia, všetky vaše triedy oboch predmetov:
+      <a class="btn btn-ghost" href="https://buy.stripe.com/6oU5kC1Uudb6e9cejj33W0m">ŠTART · 50 €</a>
+      <a class="btn btn-primary" href="https://buy.stripe.com/dRmdR8gPo7QM8OS4IJ33W0n">PROFI · 80 €</a>
     </div>
     <div class="steps" style="margin-top:34px">
-      <div class="step"><h3>Kúpite si svoje triedy</h3><p>Jeden alebo dva predmety, počet tried si zvolíte pri platbe. Trvá to minútu.</p></div>
+      <div class="step"><h3>Vyberiete si balík</h3><p>Predmet, počet tried, ŠTART alebo PROFI. Zaplatíte kartou, trvá to minútu.</p></div>
       <div class="step"><h3>Vyplníte krátky dotazník</h3><p>Predmet, triedy a podmienky vašej školy – aby boli plány naozaj vaše. 5 minút.</p></div>
-      <div class="step"><h3>Do 24 hodín máte svoje plány</h3><p>DOCX, PDF aj HTML v e-mailovej schránke – pripravené na prerokovanie a zverejnenie.</p></div>
+      <div class="step"><h3>Do 24 hodín máte svoje plány</h3><p>Hotové v e-mailovej schránke – pripravené na prerokovanie a zverejnenie.</p></div>
     </div>
-    <div class="btnrow" style="justify-content:center;margin-top:30px">
-      <a class="btn btn-primary" href="https://buy.stripe.com/14A14m8iSc729SWgrr33W0f">Začnite hneď teraz – 5 € za triedu</a>
-    </div>
-    <p class="price-note" style="text-align:center;margin-top:12px">Ceny sú konečné, vrátane DPH. Rozhodnutie je, samozrejme, na vás – ukážku máte zadarmo vyššie.</p>
+    <p class="price-note" style="text-align:center;margin-top:16px">Ceny sú konečné, vrátane DPH. Rozhodnutie je, samozrejme, na vás – ukážku máte zadarmo vyššie.</p>
   </div>
 </section>
 
@@ -200,14 +230,13 @@ footer a{color:#f0b9a8;text-decoration:none}
       <div class="offer-row"><span>Učebné osnovy Informatika – 5., 6. a 7. ročník</span><span class="val">30 €</span></div>
       <div class="offer-row bonus"><span><b>BONUS 1:</b> 3. a 4. ročník kompletné</span><span class="val"><s>20 €</s> zadarmo</span></div>
       <div class="offer-row bonus"><span><b>BONUS 2:</b> 8. ročník kompletný</span><span class="val"><s>10 €</s> zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS 3:</b> Editovateľný DOCX – doplníte hlavičku školy</span><span class="val"><s>10 €</s> zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS 4:</b> AI gramotnosť (Dodatok č. 17) už integrovaná</span><span class="val"><s>15 €</s> zadarmo</span></div>
-      <div class="offer-row bonus"><span><b>BONUS 5:</b> Aktualizácie pri zmenách ŠVP do 30. 6. 2027</span><span class="val">zadarmo</span></div>
-      <div class="offer-row total"><span>Celková hodnota</span><span class="val"><s>85 €</s></span></div>
-      <div class="offer-row today"><span>Dnes, do 31. 8. (s DPH)</span><span class="val">15 €</span></div>
+      <div class="offer-row bonus"><span><b>BONUS 3:</b> AI gramotnosť (Dodatok č. 17) už integrovaná</span><span class="val"><s>15 €</s> zadarmo</span></div>
+      <div class="offer-row bonus"><span><b>BONUS 4:</b> Aktualizácie pri zmenách ŠVP do 30. 6. 2027</span><span class="val">zadarmo</span></div>
+      <div class="offer-row today"><span>Dnes, do 31. 8. (ceny s DPH)</span><span class="val">ŠTART 15 € · PROFI 25 €</span></div>
     </div>
     <div class="btnrow" style="justify-content:center;margin-top:26px">
-      <a class="btn btn-primary" href="https://buy.stripe.com/6oU14m8iSfjefdga3333W0c">Kúpiť za 15 € – kým platí letná cena</a>
+      <a class="btn btn-ghost" href="https://buy.stripe.com/6oU14m8iSfjefdga3333W0c">ŠTART (PDF) – 15 €</a>
+      <a class="btn btn-primary" href="https://buy.stripe.com/cNi8wO1Uu0ok7KOfnn33W0o">PROFI (PDF + DOCX + Excel) – 25 €</a>
     </div>
     <p class="price-note" style="text-align:center;margin-top:10px">Od 1. 9. sa cena zvyšuje. Okamžité stiahnutie po zaplatení.</p>
   </div>
@@ -222,8 +251,8 @@ footer a{color:#f0b9a8;text-decoration:none}
     <details><summary>Môžem dokument upravovať?</summary><p>Áno, práve na to slúži formát DOCX. Doplníte hlavičku a názov školy, upravíte poznámky, prispôsobíte metódy. HTML verziu môžete zverejniť na webe školy, PDF vytlačiť do dokumentácie.</p></details>
     <details><summary>Pre koho je licencia?</summary><p>Zakúpením získava vaša škola právo dokument upraviť, používať a zverejniť pod svojou hlavičkou. Nekupujete „papier", kupujete ušetrené desiatky hodín práce. Prosíme, neposielajte súbory ďalej mimo vašej školy – každá ďalšia škola si vie ukážku aj plnú verziu zaobstarať sama.</p></details>
     <details><summary>Dostanem faktúru?</summary><p>Áno. Predávajúcim je REAL TEAM Sport s.r.o., IČO 31 369 049. Po zaplatení dostanete potvrdenie e-mailom; ak potrebujete faktúru na školu, napíšte nám na <a href="mailto:jakub@realteamsport.eu">jakub@realteamsport.eu</a> a obratom ju pošleme.</p></details>
-    <details><summary>Ktoré predmety viete spracovať?</summary><p>Všetky predmety základnej školy, pre ktoré existuje vzdelávací štandard v štátnom vzdelávacom programe – jazyky, matematiku, prírodovedné aj výchovné predmety. Informatika je hotová na okamžité stiahnutie, ostatné pripravujeme na objednávku: 5 € za triedu, dodanie do 24 hodín.</p></details>
-    <details><summary>Prečo platím za triedu a nie za ročník?</summary><p>Lebo tak vyzerá váš úväzok. Ročník je celá vrstva školy, trieda je 5.A. Vy učíte konkrétne triedy – niekedy ôsmakov áno a siedmakov nie – a plány potrebujete pre každú triedu, ktorú máte v rozvrhu a triednej knihe. Preto kupujete presne svoje triedy, žiadne balíky navyše.</p></details>
+    <details><summary>Ktoré predmety viete spracovať?</summary><p>Všetky predmety základnej školy, pre ktoré existuje vzdelávací štandard v štátnom vzdelávacom programe – jazyky, matematiku, prírodovedné aj výchovné predmety. Informatika je hotová na okamžité stiahnutie, ostatné pripravujeme na objednávku podľa cenníka vyššie, dodanie do 24 hodín.</p></details>
+    <details><summary>Prečo sa platí podľa počtu tried?</summary><p>Lebo tak vyzerá váš úväzok. Trieda je 5.A, nie celý ročník – a vy učíte konkrétne triedy, niekedy ôsmakov áno a siedmakov nie. Plány potrebujete pre každú triedu vo svojom rozvrhu a triednej knihe, preto je cena odstupňovaná podľa toho, koľko tried predmetu učíte (1–2, 3–4, 5 a viac).</p></details>
     <details><summary>Ako dlho trvá dodanie objednaného predmetu?</summary><p>Do 24 hodín od platby. Dotazník nám dá všetko, čo potrebujeme – podmienky školy, dotácie, ročníky – a dokument pripravíme obratom, nech je august pokojný.</p></details>
     <details><summary>Čo ročníky mimo povinnej dotácie (napr. informatika v 9. ročníku)?</summary><p>Ak vaša škola učí predmet z disponibilných hodín, spracujeme ho presne podľa vašich dotácií – uveďte to v dotazníku.</p></details>
     <details><summary>Kto za tým stojí?</summary><p>REAL TEAM Digital je digitálna značka spoločnosti REAL TEAM Sport s.r.o. Dokument vznikol v spolupráci s učiteľkou s dlhoročnou praxou na základnej škole a skúsenosťou s tvorbou ŠkVP a prípravou na inšpekciu.</p></details>
@@ -235,7 +264,7 @@ footer a{color:#f0b9a8;text-decoration:none}
     <h2>Zverejnené do 31. 8. – bez prepísaných víkendov</h2>
     <p class="sub" style="margin:10px auto 0;max-width:34em">Jeden predmet vybavený dnes. Za cenu jednej pizze s kolegami.</p>
     <div class="btnrow">
-      <a class="btn btn-primary" href="https://buy.stripe.com/14A14m8iSc729SWgrr33W0f">Začnite hneď teraz – 5 € za triedu</a>
+      <a class="btn btn-primary" href="#objednavka">Začnite hneď teraz – od 10 €</a>
       <a class="btn btn-ghost" href="#informatika">Informatika hneď – 15 €</a>
     </div>
   </div>
